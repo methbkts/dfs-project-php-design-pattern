@@ -27,10 +27,17 @@ $characters = Character::getAllCharacters();
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-
-
                                 <h4 class="text-white"><?= $value->name ?></h4>
-                                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                                <p class="mb-0 text-white-50"><?= $value->name ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->gender ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->health ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->energy ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->power ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->speed ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->weapon ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->special ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->race ?></p>
+                                <p class="mb-0 text-white-50"><?= $value->role ?></p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
 
                             </div>
