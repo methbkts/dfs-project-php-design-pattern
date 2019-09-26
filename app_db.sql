@@ -30,10 +30,6 @@ CREATE TABLE `characters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `characters` (`id`, `name`, `gender`, `health`, `energy`, `power`, `speed`, `weapon`, `special`, `image`, `role_id`, `race_id`) VALUES
-(1,	'Character 1',	'',	0,	0,	0,	0,	'',	'',	'https://picsum.photos/300/200',	1,	1),
-(2,	'Character 2',	'',	0,	0,	0,	0,	'',	'',	'https://picsum.photos/300/200',	2,	2),
-(3,	'Character 3',	'',	0,	0,	0,	0,	'',	'',	'https://picsum.photos/300/200',	3,	3),
-(4,	'Character 4',	'',	0,	0,	0,	0,	'',	'',	'https://picsum.photos/300/200',	2,	3),
 (6,	'toto',	'male',	10,	10,	10,	10,	'tata',	'titi',	'https://picsum.photos/300/200',	1,	1),
 (7,	'Nitem',	'male',	10,	10,	3,	5,	'Knife',	'Steal',	'https://picsum.photos/300/200',	5,	3),
 (8,	'Paul',	'male',	1,	1,	1,	1,	'Pierre',	'Jacques',	'https://picsum.photos/300/200',	4,	2),
@@ -73,4 +69,4 @@ INSERT INTO `roles` (`id`, `name`) VALUES
 (4,	'Rogue'),
 (1,	'Warrior');
 
--- 2019-09-26 09:54:02
+-- 2019-09-26 09:59:58
