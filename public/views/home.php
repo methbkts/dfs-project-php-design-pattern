@@ -28,16 +28,15 @@ $characters = Character::getAllCharacters();
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white"><?= $value->name ?></h4>
-                                <p class="mb-0 text-white-50"><?= $value->name ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->gender ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->health ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->energy ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->power ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->speed ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->weapon ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->special ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->race ?></p>
-                                <p class="mb-0 text-white-50"><?= $value->role ?></p>
+                                <p class="mb-0 text-white-50">Gender : <?= $value->gender ?></p>
+                                <p class="mb-0 text-white-50">Health : <?= $value->health ?></p>
+                                <p class="mb-0 text-white-50">Energy : <?= $value->energy ?></p>
+                                <p class="mb-0 text-white-50">Power : <?= $value->power ?></p>
+                                <p class="mb-0 text-white-50">Speed : <?= $value->speed ?></p>
+                                <p class="mb-0 text-white-50">Weapon : <?= $value->weapon ?></p>
+                                <p class="mb-0 text-white-50">Special : <?= $value->special ?></p>
+                                <p class="mb-0 text-white-50">Race : <?= $value->race ?></p>
+                                <p class="mb-0 text-white-50">Role : <?= $value->role ?></p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
 
                             </div>
