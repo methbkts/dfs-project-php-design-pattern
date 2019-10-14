@@ -1,11 +1,8 @@
 <?php
 
-// removeCharacterAction
+// editFarmerAction
 // $name = $_POST['name'];
 // $gender = $_POST['gender'];
-// $energy = intval($_POST['energy']);
-// $power = intval($_POST['power']);
-// $speed = intval($_POST['speed']);
 // $weapon = $_POST['weapon'];
 // $special = $_POST['special'];
 // if (empty($_POST['image'])) {
@@ -16,4 +13,4 @@
 // $role_id = intval($_POST['role']);
 // $race_id = intval($_POST['race']);
 
-Farmer::deleteCharacter($request_uri[1]);
+Farmer::updateFarmer($request_uri[1]);

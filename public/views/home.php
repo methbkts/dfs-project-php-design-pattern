@@ -1,5 +1,5 @@
 <?php
-$farmer = Farmer::getAllCharacters();
+$farmer = Farmer::getAllFarmers();
 ?>
 <section id="farmer" class="projects-section bg-light">
     <div class="container">
@@ -29,9 +29,6 @@ $farmer = Farmer::getAllCharacters();
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white"><?= $value->name ?></h4>
                                 <p class="mb-0 text-white-50">Gender : <?= $value->gender ?></p>
-                                <p class="mb-0 text-white-50">Energy : <?= $value->energy ?></p>
-                                <p class="mb-0 text-white-50">Power : <?= $value->power ?></p>
-                                <p class="mb-0 text-white-50">Speed : <?= $value->speed ?></p>
                                 <p class="mb-0 text-white-50">Weapon : <?= $value->weapon ?></p>
                                 <p class="mb-0 text-white-50">Special : <?= $value->special ?></p>
                                 <p class="mb-0 text-white-50">Product : <?= $value->race ?></p>

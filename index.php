@@ -27,25 +27,25 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
-    // addCharacter page
-  case '/addCharacter':
+    // addFarmer page
+  case '/addFarmer':
     $currentPageTitle = "Add Farmer";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/addCharacter.php';
+    require_once 'public/views/addFarmer.php';
     require_once 'public/layouts/footer.php';
     break;
-    // editCharacter page
-  case '/editCharacter':
+    // editFarmer page
+  case '/editFarmer':
     $currentPageTitle = "Edit Farmer";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/editCharacter.php';
+    require_once 'public/views/editFarmer.php';
     require_once 'public/layouts/footer.php';
     break;
-    // removeCharacter page
-  case '/removeCharacter':
+    // removeFarmer page
+  case '/removeFarmer':
     $currentPageTitle = "Remove Farmer";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/removeCharacter.php';
+    require_once 'public/views/removeFarmer.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -57,9 +57,9 @@ switch ($request_uri[0]) {
     break;
     // editProduct Action
   case '/updateProduct':
-    // require 'controllers/editCharacterAction.php';
+    // require 'controllers/editFarmerAction.php';
     Farmer::updateProduct($request_uri[1]);
-    // Farmer::updateCharacter($request_uri[1]);
+    // Farmer::updateFarmer($request_uri[1]);
     header('Location: /');
     break;
     // removeProduct Action

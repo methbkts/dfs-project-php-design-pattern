@@ -31,13 +31,13 @@
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/addCharacter">Add Farmer</a>
+                        <a class="nav-link js-scroll-trigger" href="/addFarmer">Add Farmer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/editCharacter">Edit Farmer</a>
+                        <a class="nav-link js-scroll-trigger" href="/editFarmer">Edit Farmer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/removeCharacter">Remove Farmer</a>
+                        <a class="nav-link js-scroll-trigger" href="/removeFarmer">Remove Farmer</a>
                     </li>
                 </ul>
             </div>

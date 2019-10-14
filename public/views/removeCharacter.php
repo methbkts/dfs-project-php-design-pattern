@@ -4,13 +4,13 @@
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
             <div class="col-xl-4 col-lg-3">
                 <div class="featured-text text-center text-lg-left">
-                    <h4>Remove character</h4>
-                    <p class="text-black-50 mb-0">You can delete an existing character by filling this form.</p>
+                    <h4>Remove farmer</h4>
+                    <p class="text-black-50 mb-0">You can delete an existing farmer by filling this form.</p>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-3"></div>
             <div class="col-xl-6 col-lg-6">
-                <form action="/deleteCharacter?<?= $value->id ?>" method="post">
+                <form action="/deleteFarmer?<?= $value->id ?>" method="post">
                     <div class="form-group row">
                         <label for="name" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
@@ -36,24 +36,6 @@
                             </div>
                         </div>
                     </fieldset>
-                    <div class="form-group row">
-                        <label for="energy" class="col-sm-2 col-form-label">Energy</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Energy" name="energy" id="energy" min="0" max="10">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="power" class="col-sm-2 col-form-label">Power</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Power" name="power" id="power" min="0" max="10">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="speed" class="col-sm-2 col-form-label">Speed</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Speed" name="speed" id="speed" min="0" max="10">
-                        </div>
-                    </div>
                     <div class="form-group row">
                         <label for="weapon" class="col-sm-2 col-form-label">Weapon</label>
                         <div class="col-sm-10">

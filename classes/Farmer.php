@@ -4,70 +4,40 @@ class Farmer
 {
     // Attributes
     protected $name;
+    protected $description;
+    protected $location;
     protected $gender;
-    protected $energy;
-    protected $power;
-    protected $speed;
-    protected $weapon;
-    protected $special;
     protected $image;
-    protected $role_id;
-    protected $race_id;
 
     // Getters
-    // Get the character's name.
+    // Get the farmer's name.
     public function getName(): ?string
     {
         return $this->name;
     }
-    // Get the character's gender.
+    // Get the farmer's description.
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+    // Get the farmer's location.
+    public function getLocation(): ?string
+    {
+        return $this->location;
+    }
+    // Get the farmer's gender.
     public function getGender(): ?string
     {
         return $this->gender;
     }
-    // Get the character's energy level.
-    public function getEnergy(): ?int
-    {
-        return $this->energy;
-    }
-    // Get the character's power.
-    public function getPower(): ?int
-    {
-        return $this->power;
-    }
-    // Get the character's speed.
-    public function getSpeed(): ?int
-    {
-        return $this->speed;
-    }
-    // Get the character's weapon.
-    public function getWeapon(): ?string
-    {
-        return $this->weapon;
-    }
-    // Get the character's special.
-    public function getSpecial(): ?string
-    {
-        return $this->special;
-    }
-    // Get the character's image.
+    // Get the farmer's image.
     public function getImage(): ?string
     {
         return $this->image;
     }
-    // Get the character's role.
-    public function getRole(): ?int
-    {
-        return $this->role_id;
-    }
-    // Get the character's race.
-    public function getRace(): ?int
-    {
-        return $this->race_id;
-    }
 
     // Setters
-    // Set the character's name.
+    // Set the farmer's name.
     public function setName($name)
     {
         if (!is_string($name)) {
@@ -75,7 +45,23 @@ class Farmer
         }
         $this->name = $name;
     }
-    // Set the character's gender.
+    // Set the farmer's description.
+    public function setDescription($description)
+    {
+        if (!is_string($description)) {
+            throw new Exception('$description must be a string!');
+        }
+        $this->description = $description;
+    }
+    // Set the farmer's location.
+    public function setLocation($location)
+    {
+        if (!is_string($location)) {
+            throw new Exception('$location must be a string!');
+        }
+        $this->location = $location;
+    }
+    // Set the farmer's gender.
     public function setGender($gender)
     {
         if (!is_string($gender)) {
@@ -83,47 +69,7 @@ class Farmer
         }
         $this->gender = $gender;
     }
-    // Set the character's energy level.
-    public function setEnergy($energy)
-    {
-        if (!is_int($energy)) {
-            throw new Exception('$energy must be an integer!');
-        }
-        $this->energy = $energy;
-    }
-    // Set the character's power.
-    public function setPower($power)
-    {
-        if (!is_int($power)) {
-            throw new Exception('$power must be an integer!');
-        }
-        $this->power = $power;
-    }
-    // Set the character's speed.
-    public function setSpeed($speed)
-    {
-        if (!is_int($speed)) {
-            throw new Exception('$speed must be an integer!');
-        }
-        $this->speed = $speed;
-    }
-    // Set the character's weapon.
-    public function setWeapon($weapon)
-    {
-        if (!is_string($weapon)) {
-            throw new Exception('$weapon must be a string!');
-        }
-        $this->weapon = $weapon;
-    }
-    // Set the character's special.
-    public function setSpecial($special)
-    {
-        if (!is_string($special)) {
-            throw new Exception('$special must be a string!');
-        }
-        $this->special = $special;
-    }
-    // Set the character's image.
+    // Set the farmer's image.
     public function setImage($image)
     {
         if (!is_string($image)) {
@@ -131,61 +77,35 @@ class Farmer
         }
         $this->image = $image;
     }
-    // Set the character's role.
-    public function setRole($role_id)
-    {
-        if (!is_int($role_id)) {
-            throw new Exception('$role_id must be an integer!');
-        }
-        $this->role_id = $role_id;
-    }
-    // Set the character's race.
-    public function setRace($race_id)
-    {
-        if (!is_int($race_id)) {
-            throw new Exception('$race_id must be an integer!');
-        }
-        $this->race_id = $race_id;
-    }
 
     // Construct
-    public function __construct(string $name, string $gender, int $energy, int $power, int $speed, string $weapon, string $special, string $image, int $role_id, int $race_id)
+    public function __construct(string $name, string $description, string $location, string $gender, string $image)
     {
         $this->setName($name);
+        $this->setDescription($description);
+        $this->setLocation($location);
         $this->setGender($gender);
-        $this->setEnergy($energy);
-        $this->setPower($power);
-        $this->setSpeed($speed);
-        $this->setWeapon($weapon);
-        $this->setSpecial($special);
         $this->setImage($image);
-        $this->setRole($role_id);
-        $this->setRace($race_id);
 
         $array = array(
             ":name" => $name,
+            ":description" => $description,
+            ":location" => $location,
             ":gender" => $gender,
-            ":energy" => $energy,
-            ":power" => $power,
-            ":speed" => $speed,
-            ":weapon" => $weapon,
-            ":special" => $special,
             ":image" => $image,
-            ":role_id" => $role_id,
-            ":race_id" => $race_id,
         );
 
-        Farmer::createCharacter($array);
+        Farmer::createFarmer($array);
     }
 
     // Other Methods
     /**
-     * Create a character and store it into the Database
+     * Create a farmer and store it into the Database
      * @param array $array
      */
-    public static function createCharacter($array)
+    public static function createFarmer($array)
     {
-        $sql = "INSERT INTO farmers (name, gender, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
+        $sql = "INSERT INTO farmers (name, description, location, gender, image) VALUES (:name, :description, :location, :gender, :image);";
 
         // Insert into DB
         $db = new Database;
@@ -193,12 +113,12 @@ class Farmer
     }
 
     /**
-     * Update a character and store it into the Database
+     * Update a farmer and store it into the Database
      * @param array $array
      */
-    public static function updateCharacter($id)
+    public static function updateFarmer($id)
     {
-        // $sql = "INSERT INTO farmers (name, gender, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
+        // $sql = "INSERT INTO farmers (name, description, location, gender, image) VALUES (:name, :description, :location, :gender, :image);";
 
         // Insert into DB
         $db = new Database;
@@ -206,44 +126,47 @@ class Farmer
     }
 
     /**
-     * Delete a character and store it into the Database
+     * Delete a farmer and store it into the Database
      * @param array $array
      */
-    public static function deleteCharacter($id)
+    public static function deleteFarmer($id)
     {
-        // $sql = "INSERT INTO farmers (name, gender, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
+        // $sql = "INSERT INTO farmers (name, description, location, gender, image) VALUES (:name, :description, :location, :gender, :image);";
 
         // Insert into DB
         $db = new Database;
         $db->req($sql, $array);
     }
 
-    public static function getAllCharacters()
+    public static function getAllFarmers()
     {
         $db = new Database;
-        $sql = "select farmers.id, farmers.name, farmers.gender, farmers.energy, farmers.power, farmers.speed, farmers.weapon, farmers.special, farmers.image,
-        types.name as role, products.name as race from farmers 
-        LEFT JOIN types ON farmers.role_id = types.id 
-        LEFT JOIN products ON farmers.race_id = products.id 
+        $sql = "select farmers.id, farmers.name, farmers.description, farmers.location, farmers.gender, farmers.image,
+        types.name as types, products.name as product from farmers 
         order by id;";
+        // $sql = "select farmers.id, farmers.name, farmers.gender, farmers.image,
+        // types.name as role, products.name as race from farmers 
+        // LEFT JOIN types ON farmers.role_id = types.id 
+        // LEFT JOIN products ON farmers.race_id = products.id 
+        // order by id;";
         $result = $db->req($sql);
         // Functions::dd($result);
         return $result;
     }
 
-    public static function getAllRoles()
-    {
-        $db = new Database;
-        $sql = "select * from types order by id";
-        $result = $db->req($sql);
-        return $result;
-    }
+    // public static function getAllRoles()
+    // {
+    //     $db = new Database;
+    //     $sql = "select * from types order by id";
+    //     $result = $db->req($sql);
+    //     return $result;
+    // }
 
-    public static function getAllRaces()
-    {
-        $db = new Database;
-        $sql = "select * from products order by id";
-        $result = $db->req($sql);
-        return $result;
-    }
+    // public static function getAllRaces()
+    // {
+    //     $db = new Database;
+    //     $sql = "select * from products order by id";
+    //     $result = $db->req($sql);
+    //     return $result;
+    // }
 }
