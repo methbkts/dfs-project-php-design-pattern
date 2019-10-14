@@ -6,7 +6,6 @@ class Farmer
     protected $name;
     protected $description;
     protected $location;
-    protected $gender;
     protected $image;
 
     // Getters
@@ -24,11 +23,6 @@ class Farmer
     public function getLocation(): ?string
     {
         return $this->location;
-    }
-    // Get the farmer's gender.
-    public function getGender(): ?string
-    {
-        return $this->gender;
     }
     // Get the farmer's image.
     public function getImage(): ?string
@@ -61,14 +55,6 @@ class Farmer
         }
         $this->location = $location;
     }
-    // Set the farmer's gender.
-    public function setGender($gender)
-    {
-        if (!is_string($gender)) {
-            throw new Exception('$gender must be a string!');
-        }
-        $this->gender = $gender;
-    }
     // Set the farmer's image.
     public function setImage($image)
     {
@@ -79,19 +65,17 @@ class Farmer
     }
 
     // Construct
-    public function __construct(string $name, string $description, string $location, string $gender, string $image)
+    public function __construct(string $name, string $description, string $location, string $image)
     {
         $this->setName($name);
         $this->setDescription($description);
         $this->setLocation($location);
-        $this->setGender($gender);
         $this->setImage($image);
 
         $array = array(
             ":name" => $name,
             ":description" => $description,
             ":location" => $location,
-            ":gender" => $gender,
             ":image" => $image,
         );
 
@@ -105,7 +89,7 @@ class Farmer
      */
     public static function createFarmer($array)
     {
-        $sql = "INSERT INTO farmers (name, description, location, gender, image) VALUES (:name, :description, :location, :gender, :image);";
+        $sql = "INSERT INTO farmers (name, description, location, image) VALUES (:name, :description, :location, :image);";
 
         // Insert into DB
         $db = new Database;
@@ -118,7 +102,7 @@ class Farmer
      */
     public static function updateFarmer($id)
     {
-        // $sql = "INSERT INTO farmers (name, description, location, gender, image) VALUES (:name, :description, :location, :gender, :image);";
+        // $sql = "INSERT INTO farmers (name, description, location, image) VALUES (:name, :description, :location, :image);";
 
         // Insert into DB
         $db = new Database;
@@ -131,7 +115,7 @@ class Farmer
      */
     public static function deleteFarmer($id)
     {
-        // $sql = "INSERT INTO farmers (name, description, location, gender, image) VALUES (:name, :description, :location, :gender, :image);";
+        // $sql = "INSERT INTO farmers (name, description, location, image) VALUES (:name, :description, :location, :image);";
 
         // Insert into DB
         $db = new Database;
@@ -141,13 +125,12 @@ class Farmer
     public static function getAllFarmers()
     {
         $db = new Database;
-        $sql = "select farmers.id, farmers.name, farmers.description, farmers.location, farmers.gender, farmers.image,
-        types.name as types, products.name as product from farmers 
+        $sql = "select farmers.id, farmers.name, farmers.description, farmers.location, farmers.image from farmers
         order by id;";
-        // $sql = "select farmers.id, farmers.name, farmers.gender, farmers.image,
-        // types.name as role, products.name as race from farmers 
-        // LEFT JOIN types ON farmers.role_id = types.id 
-        // LEFT JOIN products ON farmers.race_id = products.id 
+
+        // $sql = "select farmers.id, farmers.name, farmers.image,
+        // products.name as product from farmers 
+        // LEFT JOIN products ON farmers.id = products.farmer_id 
         // order by id;";
         $result = $db->req($sql);
         // Functions::dd($result);

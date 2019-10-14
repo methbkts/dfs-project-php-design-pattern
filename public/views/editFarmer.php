@@ -17,37 +17,6 @@
                             <input type="text" class="form-control" placeholder="Name" name="name" id="name">
                         </div>
                     </div>
-                    <fieldset class="form-group">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
-                                    <label class="form-check-label" for="male">
-                                        Male
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                                    <label class="form-check-label" for="female">
-                                        Female
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <div class="form-group row">
-                        <label for="weapon" class="col-sm-2 col-form-label">Weapon</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Weapon" name="weapon" id="weapon">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="special" class="col-sm-2 col-form-label">Special</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Special" name="special" id="special">
-                        </div>
-                    </div>
                     <div class="form-group row">
                         <label for="image" class="col-sm-2 col-form-label">Image</label>
                         <div class="col-sm-10">

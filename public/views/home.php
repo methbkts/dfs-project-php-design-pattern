@@ -1,14 +1,14 @@
 <?php
 $farmer = Farmer::getAllFarmers();
 ?>
-<section id="farmer" class="projects-section bg-light">
+<section id="farmers" class="projects-section bg-light">
     <div class="container">
 
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4>List of Farmers</h4>
-                    <p class="text-black-50 mb-0">All the farmer are listed below.</p>
+                    <p class="text-black-50 mb-0">All the farmers are listed below.</p>
                 </div>
             </div>
         </div>
@@ -27,12 +27,10 @@ $farmer = Farmer::getAllFarmers();
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white"><?= $value->name ?></h4>
-                                <p class="mb-0 text-white-50">Gender : <?= $value->gender ?></p>
-                                <p class="mb-0 text-white-50">Weapon : <?= $value->weapon ?></p>
-                                <p class="mb-0 text-white-50">Special : <?= $value->special ?></p>
-                                <p class="mb-0 text-white-50">Product : <?= $value->race ?></p>
-                                <p class="mb-0 text-white-50">Type : <?= $value->role ?></p>
+                                <h4 class="text-white"><?= $value->name ?> - <span class="text-white-50"><?= $value->location ?></span></h4>
+                                <p class="mb-0 text-muted"><?= $value->description ?></p>
+                                <!-- <p class="mb-0 text-muted">Product : <?= $value->race ?></p> -->
+                                <!-- <p class="mb-0 text-white-50">Type : <?= $value->role ?></p> -->
                                 <hr class="d-none d-lg-block mb-0 ml-0">
 
                             </div>

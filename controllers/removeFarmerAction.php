@@ -2,7 +2,6 @@
 
 // removeFarmerAction
 // $name = $_POST['name'];
-// $gender = $_POST['gender'];
 // $weapon = $_POST['weapon'];
 // $special = $_POST['special'];
 // if (empty($_POST['image'])) {
