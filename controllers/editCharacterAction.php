@@ -3,7 +3,6 @@
 // editCharacterAction
 // $name = $_POST['name'];
 // $gender = $_POST['gender'];
-// $health = intval($_POST['health']);
 // $energy = intval($_POST['energy']);
 // $power = intval($_POST['power']);
 // $speed = intval($_POST['speed']);
@@ -17,4 +16,4 @@
 // $role_id = intval($_POST['role']);
 // $race_id = intval($_POST['race']);
 
-Character::updateCharacter($request_uri[1]);
+Farmer::updateCharacter($request_uri[1]);

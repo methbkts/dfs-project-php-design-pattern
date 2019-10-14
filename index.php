@@ -29,21 +29,21 @@ switch ($request_uri[0]) {
 
     // addCharacter page
   case '/addCharacter':
-    $currentPageTitle = "Add Character";
+    $currentPageTitle = "Add Farmer";
     require_once 'public/layouts/header.php';
     require_once 'public/views/addCharacter.php';
     require_once 'public/layouts/footer.php';
     break;
     // editCharacter page
   case '/editCharacter':
-    $currentPageTitle = "Edit Character";
+    $currentPageTitle = "Edit Farmer";
     require_once 'public/layouts/header.php';
     require_once 'public/views/editCharacter.php';
     require_once 'public/layouts/footer.php';
     break;
     // removeCharacter page
   case '/removeCharacter':
-    $currentPageTitle = "Remove Character";
+    $currentPageTitle = "Remove Farmer";
     require_once 'public/layouts/header.php';
     require_once 'public/views/removeCharacter.php';
     require_once 'public/layouts/footer.php';
@@ -58,13 +58,13 @@ switch ($request_uri[0]) {
     // editCharacter Action
   case '/updateCharacter':
     require 'controllers/editCharacterAction.php';
-    // Character::updateCharacter($request_uri[1]);
+    // Farmer::updateCharacter($request_uri[1]);
     header('Location: /');
     break;
     // removeCharacter Action
   case '/deleteCharacter':
     require 'controllers/removeCharacterAction.php';
-    // Character::deleteCharacter($request_uri[1]);
+    // Farmer::deleteCharacter($request_uri[1]);
     header('Location: /');
     break;
 

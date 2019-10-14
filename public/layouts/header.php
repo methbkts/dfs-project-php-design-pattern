@@ -27,17 +27,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/#characters">Display Characters</a>
+                        <a class="nav-link js-scroll-trigger" href="/#farmers">Display Farmers</a>
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/addCharacter">Add Character</a>
+                        <a class="nav-link js-scroll-trigger" href="/addCharacter">Add Farmer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/editCharacter">Edit Character</a>
+                        <a class="nav-link js-scroll-trigger" href="/editCharacter">Edit Farmer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/removeCharacter">Remove Character</a>
+                        <a class="nav-link js-scroll-trigger" href="/removeCharacter">Remove Farmer</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
                 if ($currentPageTitle == "Homepage") { ?>
                     <h1 class="mx-auto my-0 text-uppercase mb-4">Welcome</h1>
                     <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2> -->
-                    <a href="#characters" class="btn btn-primary js-scroll-trigger">Display Characters</a>
+                    <a href="#farmers" class="btn btn-primary js-scroll-trigger">Display Farmers</a>
                 <?php
                 } else if ($currentPageTitle == "Error 404") { ?>
                     <h1 class="mx-auto my-0 text-uppercase mb-4"><?= $currentPageTitle ?></h1>

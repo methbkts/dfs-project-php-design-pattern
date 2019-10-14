@@ -3,7 +3,6 @@
 // addCharacterAction
 $name = $_POST['name'];
 $gender = $_POST['gender'];
-$health = intval($_POST['health']);
 $energy = intval($_POST['energy']);
 $power = intval($_POST['power']);
 $speed = intval($_POST['speed']);
@@ -18,4 +17,4 @@ $role_id = intval($_POST['role']);
 $race_id = intval($_POST['race']);
 
 // addCharacter
-$character = new Character($name, $gender, $health, $energy, $power, $speed, $weapon, $special, $image, $role_id, $race_id);
+$character = new Farmer($name, $gender, $energy, $power, $speed, $weapon, $special, $image, $role_id, $race_id);

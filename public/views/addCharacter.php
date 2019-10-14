@@ -1,6 +1,6 @@
 <?php
-$roles = Character::getAllRoles();
-$races = Character::getAllRaces();
+$types = Farmer::getAllRoles();
+$products = Farmer::getAllRaces();
 ?>
 <section id="section" class="projects-section bg-light">
     <div class="container">
@@ -41,12 +41,6 @@ $races = Character::getAllRaces();
                         </div>
                     </fieldset>
                     <div class="form-group row">
-                        <label for="health" class="col-sm-2 col-form-label">Health</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Health" name="health" id="health" min="0" max="10">
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label for="energy" class="col-sm-2 col-form-label">Energy</label>
                         <div class="col-sm-10">
                             <input type="number" class="form-control" placeholder="Energy" name="energy" id="energy" min="0" max="10">
@@ -83,12 +77,12 @@ $races = Character::getAllRaces();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="race" class="col-sm-2 col-form-label">Race</label>
+                        <label for="race" class="col-sm-2 col-form-label">Product</label>
                         <div class="col-sm-10">
-                            <!-- <input type="text" class="form-control" placeholder="Race" name="race" id="race"> -->
+                            <!-- <input type="text" class="form-control" placeholder="Product" name="race" id="race"> -->
                             <select name="race" id="race">
                                 <?php
-                                foreach ($races as $key => $value) {
+                                foreach ($products as $key => $value) {
                                     ?>
                                     <option value="<?= ++$key ?>"><?= $value->name ?></option>
                                 <?php
@@ -98,12 +92,12 @@ $races = Character::getAllRaces();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="role" class="col-sm-2 col-form-label">Role</label>
+                        <label for="role" class="col-sm-2 col-form-label">Type</label>
                         <div class="col-sm-10">
-                            <!-- <input type="text" class="form-control" placeholder="Role" name="role" id="role"> -->
+                            <!-- <input type="text" class="form-control" placeholder="Type" name="role" id="role"> -->
                             <select name="role" id="role">
                                 <?php
-                                foreach ($roles as $key => $value) {
+                                foreach ($types as $key => $value) {
                                     ?>
                                     <option value="<?= ++$key ?>"><?= $value->name ?></option>
                                 <?php

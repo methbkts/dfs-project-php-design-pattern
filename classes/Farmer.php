@@ -1,11 +1,10 @@
 <?php
 
-class Character
+class Farmer
 {
     // Attributes
     protected $name;
     protected $gender;
-    protected $health;
     protected $energy;
     protected $power;
     protected $speed;
@@ -25,11 +24,6 @@ class Character
     public function getGender(): ?string
     {
         return $this->gender;
-    }
-    // Get the character's health level.
-    public function getHealth(): ?int
-    {
-        return $this->health;
     }
     // Get the character's energy level.
     public function getEnergy(): ?int
@@ -88,14 +82,6 @@ class Character
             throw new Exception('$gender must be a string!');
         }
         $this->gender = $gender;
-    }
-    // Set the character's health level.
-    public function setHealth($health)
-    {
-        if (!is_int($health)) {
-            throw new Exception('$health must be an integer!');
-        }
-        $this->health = $health;
     }
     // Set the character's energy level.
     public function setEnergy($energy)
@@ -163,11 +149,10 @@ class Character
     }
 
     // Construct
-    public function __construct(string $name, string $gender, int $health, int $energy, int $power, int $speed, string $weapon, string $special, string $image, int $role_id, int $race_id)
+    public function __construct(string $name, string $gender, int $energy, int $power, int $speed, string $weapon, string $special, string $image, int $role_id, int $race_id)
     {
         $this->setName($name);
         $this->setGender($gender);
-        $this->setHealth($health);
         $this->setEnergy($energy);
         $this->setPower($power);
         $this->setSpeed($speed);
@@ -180,7 +165,6 @@ class Character
         $array = array(
             ":name" => $name,
             ":gender" => $gender,
-            ":health" => $health,
             ":energy" => $energy,
             ":power" => $power,
             ":speed" => $speed,
@@ -191,7 +175,7 @@ class Character
             ":race_id" => $race_id,
         );
 
-        Character::createCharacter($array);
+        Farmer::createCharacter($array);
     }
 
     // Other Methods
@@ -201,7 +185,7 @@ class Character
      */
     public static function createCharacter($array)
     {
-        $sql = "INSERT INTO characters (name, gender, health, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :health, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
+        $sql = "INSERT INTO farmers (name, gender, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
 
         // Insert into DB
         $db = new Database;
@@ -214,7 +198,7 @@ class Character
      */
     public static function updateCharacter($id)
     {
-        // $sql = "INSERT INTO characters (name, gender, health, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :health, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
+        // $sql = "INSERT INTO farmers (name, gender, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
 
         // Insert into DB
         $db = new Database;
@@ -227,7 +211,7 @@ class Character
      */
     public static function deleteCharacter($id)
     {
-        // $sql = "INSERT INTO characters (name, gender, health, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :health, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
+        // $sql = "INSERT INTO farmers (name, gender, energy, power, speed, weapon, special, image, role_id, race_id) VALUES (:name, :gender, :energy, :power, :speed, :weapon, :special, :image, :role_id, :race_id);";
 
         // Insert into DB
         $db = new Database;
@@ -237,10 +221,10 @@ class Character
     public static function getAllCharacters()
     {
         $db = new Database;
-        $sql = "select characters.id, characters.name, characters.gender, characters.health, characters.energy, characters.power, characters.speed, characters.weapon, characters.special, characters.image,
-        roles.name as role, races.name as race from characters 
-        LEFT JOIN roles ON characters.role_id = roles.id 
-        LEFT JOIN races ON characters.race_id = races.id 
+        $sql = "select farmers.id, farmers.name, farmers.gender, farmers.energy, farmers.power, farmers.speed, farmers.weapon, farmers.special, farmers.image,
+        types.name as role, products.name as race from farmers 
+        LEFT JOIN types ON farmers.role_id = types.id 
+        LEFT JOIN products ON farmers.race_id = products.id 
         order by id;";
         $result = $db->req($sql);
         // Functions::dd($result);
@@ -250,7 +234,7 @@ class Character
     public static function getAllRoles()
     {
         $db = new Database;
-        $sql = "select * from roles order by id";
+        $sql = "select * from types order by id";
         $result = $db->req($sql);
         return $result;
     }
@@ -258,7 +242,7 @@ class Character
     public static function getAllRaces()
     {
         $db = new Database;
-        $sql = "select * from races order by id";
+        $sql = "select * from products order by id";
         $result = $db->req($sql);
         return $result;
     }
