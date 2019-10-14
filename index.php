@@ -51,18 +51,43 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
+    // addProduct page
+  case '/addProduct':
+    $currentPageTitle = "Add Product";
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/addProduct.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
+    // editProduct page
+  case '/editProduct':
+    $currentPageTitle = "Edit Product";
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/editProduct.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
+    // removeProduct page
+  case '/removeProduct':
+    $currentPageTitle = "Remove Product";
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/removeProduct.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
+
     // Actions -->
     // addProduct Action
   case '/createProduct':
     if (empty($_POST['image'])) {
       $image = 'https://picsum.photos/200/100';
     } else {
-      $image = $_POST['image'];
+      $image = Functions::test_input($_POST['image']);
     }
-    $name = $_POST['name'];
+    $name = Functions::test_input($_POST['name']);
     $price = intval($_POST['price']);
-    $race = intval($_POST['race']);
-    $role = intval($_POST['role']);
+    $type_id = intval($_POST['type_id']);
+    $farmer_id = intval($_POST['farmer_id']);
     $product = new Product($name, $price, $image, $type_id, $farmer_id);
     require 'controllers/addProductAction.php';
     header('Location: /');
@@ -70,9 +95,9 @@ switch ($request_uri[0]) {
 
     // editProduct Action
   case '/updateProduct':
-    $name = $_POST['name'];
-    $price = $_POST['price'];
-    $image = $_POST['image'];
+    $name = Functions::test_input($_POST['name']);
+    $price = Functions::test_input($_POST['price']);
+    $image = Functions::test_input($_POST['image']);
     $type_id = intval($_POST['type_id']);
     $farmer_id = intval($_POST['farmer_id']);
 
