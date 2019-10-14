@@ -50,21 +50,22 @@ switch ($request_uri[0]) {
     break;
 
     // Actions -->
-    // addCharacter Action
-  case '/createCharacter':
-    require 'controllers/addCharacterAction.php';
+    // addProduct Action
+  case '/createProduct':
+    require 'controllers/addProductAction.php';
     header('Location: /');
     break;
-    // editCharacter Action
-  case '/updateCharacter':
-    require 'controllers/editCharacterAction.php';
+    // editProduct Action
+  case '/updateProduct':
+    // require 'controllers/editCharacterAction.php';
+    Farmer::updateProduct($request_uri[1]);
     // Farmer::updateCharacter($request_uri[1]);
     header('Location: /');
     break;
-    // removeCharacter Action
-  case '/deleteCharacter':
-    require 'controllers/removeCharacterAction.php';
-    // Farmer::deleteCharacter($request_uri[1]);
+    // removeProduct Action
+  case '/deleteProduct':
+    // require 'controllers/removeProductAction.php';
+    Farmer::deleteProduct($request_uri[1]);
     header('Location: /');
     break;
 
