@@ -28,17 +28,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/#farmers">Display Farmers</a>
+                        <a class="nav-link js-scroll-trigger" href="/#farmers">Trouvez votre fermier</a>
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/addFarmer">Add Farmer</a>
+                        <a class="nav-link js-scroll-trigger" href="/addFarmer">Ajouter un fermier</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/editFarmer">Edit Farmer</a>
+                        <a class="nav-link js-scroll-trigger" href="/editFarmer">Editer un fermier</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/removeFarmer">Remove Farmer</a>
+                        <a class="nav-link js-scroll-trigger" href="/removeFarmer">Supprimer un fermier</a>
                     </li>
                 </ul>
             </div>
@@ -50,9 +50,9 @@
             <div class="mx-auto text-center">
                 <?php
                 if ($currentPageTitle == "Homepage") { ?>
-                    <h1 class="mx-auto my-0 text-uppercase mb-4">Welcome</h1>
+                    <h1 class="mx-auto my-0 text-uppercase mb-4">Bienvenue</h1>
                     <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2> -->
-                    <a href="#farmers" class="btn btn-primary js-scroll-trigger">Display Farmers</a>
+                    <a href="#farmers" class="btn btn-primary js-scroll-trigger">Trouvez votre fermier</a>
                 <?php
                 } else if ($currentPageTitle == "Error 404") { ?>
                     <h1 class="mx-auto my-0 text-uppercase mb-4"><?= $currentPageTitle ?></h1>
