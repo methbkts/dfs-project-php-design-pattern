@@ -7,8 +7,8 @@ $farmer = Farmer::getAllFarmers();
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
-                    <h4>List of Farmers</h4>
-                    <p class="text-black-50 mb-0">All the farmers are listed below.</p>
+                    <h4>Listes des fermiers :</h4>
+                    <p class="text-black-50 mb-0">Tous les fermiers qui travaille en cooperation avec notre entreprise sont liste ci-dessous.</p>
                 </div>
             </div>
         </div>
@@ -29,8 +29,6 @@ $farmer = Farmer::getAllFarmers();
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white"><?= $value->name ?> - <span class="text-white-50"><?= $value->location ?></span></h4>
                                 <p class="mb-0 text-muted"><?= $value->description ?></p>
-                                <!-- <p class="mb-0 text-muted">Product : <?= $value->race ?></p> -->
-                                <!-- <p class="mb-0 text-white-50">Type : <?= $value->role ?></p> -->
                                 <hr class="d-none d-lg-block mb-0 ml-0">
                                 <button type="button" class="btn btn-farmer" style="float: right;"><i class="fas fa-seedling fa-2x"></i></button>
                             </div>
