@@ -150,6 +150,12 @@ switch ($request_uri[0]) {
     header('Location: /');
     break;
 
+    // displayProductsByFarmer Action
+    case '/displayProductsByFarmer':
+    $id = $request_uri[1];
+    $product = getProductsByFarmer($id);
+    header('Location: /displayProductsByFarmer');
+
     // Everything else
   default:
     $currentPageTitle = "Error 404";
