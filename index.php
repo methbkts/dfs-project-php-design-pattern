@@ -77,6 +77,7 @@ switch ($request_uri[0]) {
 
 
     // Actions -->
+    // TODO: crud actions
     // addFarmer Action
   case '/createFarmer':
     if (empty($_POST['image'])) {
@@ -123,9 +124,10 @@ switch ($request_uri[0]) {
     }
     $name = Functions::test_input($_POST['name']);
     $price = intval($_POST['price']);
+    $price = intval($_POST['quantity']);
     $type_id = intval($_POST['type_id']);
     $farmer_id = intval($_POST['farmer_id']);
-    $product = new Product($name, $price, $image, $type_id, $farmer_id);
+    $product = new Product($name, $price, $image, $quantity, $type_id, $farmer_id);
     require 'controllers/addProductAction.php';
     header('Location: /');
     break;
@@ -133,13 +135,13 @@ switch ($request_uri[0]) {
     // editProduct Action
   case '/updateProduct':
     $name = Functions::test_input($_POST['name']);
-    $price = Functions::test_input($_POST['price']);
     $image = Functions::test_input($_POST['image']);
+    $price = intval($_POST['price']);
+    $quantity = $_POST['quantity'];
     $type_id = intval($_POST['type_id']);
     $farmer_id = intval($_POST['farmer_id']);
 
-    // require 'controllers/editCharacterAction.php';
-    Product::updateProduct($request_uri[1], $name, $price, $image, $type_id, $farmer_id);
+    Product::updateProduct($request_uri[1], $name, $price, $image, $quantity, $type_id, $farmer_id);
     // Farmer::updateCharacter($request_uri[1]);
     header('Location: /');
     break;
