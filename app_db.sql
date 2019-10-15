@@ -33,18 +33,24 @@ CREATE TABLE `products` (
   `price` decimal(10,2) unsigned NOT NULL,
   `image` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `quantity` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`id`)
+  `farmer_id` int(11) unsigned NOT NULL,
+  `type_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `farmer_id` (`farmer_id`),
+  KEY `type_id` (`type_id`),
+  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`farmer_id`) REFERENCES `farmers` (`id`),
+  CONSTRAINT `products_ibfk_2` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `products` (`id`, `name`, `price`, `image`, `quantity`) VALUES
-(1,	'Carotte',	1.50,	'https://pixabay.com/get/53e7d3454355b108f5d08460825668204022dfe05450714f702672d5/bag-576697_1280.png',	0),
-(2,	'Tomate',	2.00,	'https://images.unsplash.com/photo-1557863467-1cba853b8649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80',	0),
-(3,	'Laitue',	0.80,	'https://trello-attachments.s3.amazonaws.com/5da574f7185695141ee33dfa/5da5775658b1363e867dc537/077a1c2f428aeda17b91a04cd0464498/photo-1506073881649-4e23be3e9ed0.jpeg',	0),
-(4,	'Pomme',	1.20,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/634x951/e304d1c59fb205604faf239e00e3532b/photo-1543588906-0f97de562e31.jpeg.jpg',	0),
-(5,	'Fraise',	1.70,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/1200x800/bd1bd56d5f3da5117396e5395eaf3984/strawberry.jpg',	0),
-(6,	'Poireau',	0.60,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/634x950/e6a11b177ee5f58e54ffc7e6a4f595b0/poireau.jpg',	0),
-(7,	'Poire',	0.90,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/1200x800/bc5419a4a50b0a43466c0ee3c205bd90/poire.jpg',	0),
-(8,	'Banane',	1.50,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/634x951/a7e12e8b8d1cbda1ede4639a4148051a/Banane.jpg',	0);
+INSERT INTO `products` (`id`, `name`, `price`, `image`, `quantity`, `farmer_id`, `type_id`) VALUES
+(1,	'Carotte',	1.50,	'https://pixabay.com/get/53e7d3454355b108f5d08460825668204022dfe05450714f702672d5/bag-576697_1280.png',	0,	7,	2),
+(2,	'Tomate',	2.00,	'https://images.unsplash.com/photo-1557863467-1cba853b8649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80',	0,	8,	2),
+(3,	'Laitue',	0.80,	'https://trello-attachments.s3.amazonaws.com/5da574f7185695141ee33dfa/5da5775658b1363e867dc537/077a1c2f428aeda17b91a04cd0464498/photo-1506073881649-4e23be3e9ed0.jpeg',	0,	10,	2),
+(4,	'Pomme',	1.20,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/634x951/e304d1c59fb205604faf239e00e3532b/photo-1543588906-0f97de562e31.jpeg.jpg',	0,	7,	1),
+(5,	'Fraise',	1.70,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/1200x800/bd1bd56d5f3da5117396e5395eaf3984/strawberry.jpg',	0,	8,	1),
+(6,	'Poireau',	0.60,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/634x950/e6a11b177ee5f58e54ffc7e6a4f595b0/poireau.jpg',	0,	10,	2),
+(7,	'Poire',	0.90,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/1200x800/bc5419a4a50b0a43466c0ee3c205bd90/poire.jpg',	0,	7,	1),
+(8,	'Banane',	1.50,	'https://trello-attachments.s3.amazonaws.com/5da5775658b1363e867dc537/634x951/a7e12e8b8d1cbda1ede4639a4148051a/Banane.jpg',	0,	8,	1);
 
 DROP TABLE IF EXISTS `types`;
 CREATE TABLE `types` (
@@ -58,4 +64,4 @@ INSERT INTO `types` (`id`, `name`) VALUES
 (1,	'Fruit'),
 (2,	'Légume');
 
--- 2019-10-14 15:08:13
+-- 2019-10-14 15:12:55
