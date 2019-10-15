@@ -41,7 +41,7 @@
                         <a class="nav-link js-scroll-trigger" href="/removeFarmer">Supprimer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/#products">Liste des produits</a>
+                        <a class="nav-link js-scroll-trigger" href="/displayProducts#section">Liste des produits</a>
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <li class="nav-item">

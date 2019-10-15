@@ -1,8 +1,9 @@
 <?php
-$product = Product::getAllProducts();
-$farmerName = Farmer::getName();
+$products = Product::getAllProducts();
+$farmers = Farmer::getAllFarmers();
+// $farmerName = Farmer::getName();
 ?>
-<section id="farmers" class="projects-section bg-light">
+<section id="section" class="projects-section bg-light">
     <div class="container">
 
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
@@ -16,8 +17,10 @@ $farmerName = Farmer::getName();
 
         <!-- Project One Row -->
         <?php
-
-        foreach ($product as $key => $value) {
+        foreach ($farmers as $key => $value) {
+            $farmerName = $value->name;
+        }
+        foreach ($products as $key => $value) {
 
             ?>
             <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -28,7 +31,7 @@ $farmerName = Farmer::getName();
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white"><?= $value->name ?> - <span class="text-white-50"><?= $value->price ?></span>  - <span class="text-white-50"><?= $value->quantity ?></span></h4>
+                                <h4 class="text-white"><?= $value->name ?> de <?= $farmerName ?> - <span class="text-white-50"><?= $value->price ?></span> - <span class="text-white-50"><?= $value->quantity ?></span></h4>
                                 <p class="mb-0 text-muted"><?= $value->description ?></p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
 
