@@ -1,10 +1,9 @@
 /* Custom CSS */
 
 .btn-farmer {
-    max-height: 30% !important;
-    background-color: #00881f;
-    color: #fff;
-    padding :1rem 1.25rem !important;
+    padding: 10px !important;
+    background-color: #64a19d;
+    color: white;
 }
 
 i>.fa-seedling{
