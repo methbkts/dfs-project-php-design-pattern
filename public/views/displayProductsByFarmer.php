@@ -1,4 +1,5 @@
 <?php
+var_dump($id);die;
 $product = getProductsByFarmer($id);
 $farmerName = Farmer::getName();
 ?>
