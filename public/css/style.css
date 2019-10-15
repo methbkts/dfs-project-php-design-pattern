@@ -11,6 +11,12 @@ i>.fa-seedling{
     box-sizing: content-box !important;
 }
 
+.displayProducts .btn{
+    padding: 10px !important;
+}
+.displayProducts p{
+    margin: 10px !important;
+}
 .bottom-card{
    margin-block-start: 20% !important;
 }
