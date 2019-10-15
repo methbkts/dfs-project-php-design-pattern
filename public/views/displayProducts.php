@@ -17,9 +17,6 @@ $farmers = Farmer::getAllFarmers();
 
         <!-- Project One Row -->
         <?php
-        foreach ($farmers as $key => $value) {
-            $farmerName = $value->name;
-        }
         foreach ($products as $key => $value) {
 
             ?>
@@ -31,10 +28,10 @@ $farmers = Farmer::getAllFarmers();
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white"><?= $value->name ?> de <?= $farmerName ?> - <span class="text-white-50"><?= $value->price ?></span> - <span class="text-white-50"><?= $value->quantity ?></span></h4>
-                                <p class="mb-0 text-muted"><?= $value->description ?></p>
+                                <h4 class="text-white"><?= $value->name ?> de <?= $value->farmer ?></span></h4>
+                                <p class="mb-0 text-muted"> <span class="text-white-50">Les <?= $value->name ?> de <?= $value->farmer ?> sont propose a : <?= $value->price ?> €</span>, il en reste : <span class="text-white-50"><?= $value->quantity ?></p>
+                                <p class="text-white-50"> pour voir plus de produits propose par <?= $value->farmer ?> <button type="button">+</button> </p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
-
                             </div>
                         </div>
                     </div>
