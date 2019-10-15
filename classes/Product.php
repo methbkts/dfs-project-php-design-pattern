@@ -152,6 +152,19 @@ class Product
         return $result;
     }
 
+    public static function getProductsByFarmer($id){
+        $db = new Database;
+        $sql = "select product.id, product.name, product.price,
+        types.name as type, farmers.name as farmer from farmers 
+        LEFT JOIN types ON product.type_id = types.id 
+        LEFT JOIN farmers ON product.farmer_id = farmer.id 
+        order by id WHERE ((`id` = $id));";
+        $result = $db->req($sql);
+
+        return $result;
+
+    }
+
     public static function getAllTypes()
     {
         $db = new Database;
