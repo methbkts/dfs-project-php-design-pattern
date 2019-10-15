@@ -2,36 +2,89 @@
 
 class Farmer
 {
-    // Attributes
+    /**
+     * @var Farmer
+     * @access private
+     * @static
+     */
+    private static $_instance = null;
+
+    /**
+     * @var string
+     * @access protected
+     */
     protected $name;
+
+    /**
+     * @var string
+     * @access protected
+     */
     protected $description;
+
+    /**
+     * @var string
+     * @access protected
+     */
     protected $location;
+
+    /**
+     * @var string
+     * @access protected
+     */
     protected $image;
 
-    // Getters
-    // Get the farmer's name.
+
+    /**
+     * Method that returns the farmer's name
+     *
+     * @param void
+     * @return string
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
-    // Get the farmer's description.
+
+    /**
+     * Method that returns the farmer's description
+     *
+     * @param void
+     * @return string
+     */
     public function getDescription(): ?string
     {
         return $this->description;
     }
-    // Get the farmer's location.
+
+    /**
+     * Method that returns the farmer's location
+     *
+     * @param void
+     * @return string
+     */
     public function getLocation(): ?string
     {
         return $this->location;
     }
-    // Get the farmer's image.
+
+    /**
+     * Method that returns the farmer's image
+     *
+     * @param void
+     * @return string
+     */
     public function getImage(): ?string
     {
         return $this->image;
     }
 
-    // Setters
-    // Set the farmer's name.
+
+    /**
+     * Method that set the farmer's name
+     *
+     * @param string $name
+     * @return void
+     */
     public function setName($name)
     {
         if (!is_string($name)) {
@@ -39,7 +92,13 @@ class Farmer
         }
         $this->name = $name;
     }
-    // Set the farmer's description.
+
+    /**
+     * Method that set the farmer's description
+     *
+     * @param string $description
+     * @return void
+     */
     public function setDescription($description)
     {
         if (!is_string($description)) {
@@ -47,7 +106,13 @@ class Farmer
         }
         $this->description = $description;
     }
-    // Set the farmer's location.
+
+    /**
+     * Method that set the farmer's location
+     *
+     * @param string $location
+     * @return void
+     */
     public function setLocation($location)
     {
         if (!is_string($location)) {
@@ -55,7 +120,13 @@ class Farmer
         }
         $this->location = $location;
     }
-    // Set the farmer's image.
+
+    /**
+     * Method that set the farmer's image
+     *
+     * @param string $image
+     * @return void
+     */
     public function setImage($image)
     {
         if (!is_string($image)) {
@@ -64,7 +135,12 @@ class Farmer
         $this->image = $image;
     }
 
-    // Construct
+    /**
+     * Class Constructor
+     *
+     * @param string $name, $description, $location, $image
+     * @return void
+     */
     public function __construct(string $name, string $description, string $location, string $image)
     {
         $this->setName($name);
@@ -82,10 +158,29 @@ class Farmer
         Farmer::createFarmer($array);
     }
 
-    // Other Methods
+    // /**
+    //  * Method that creates the single instance of the class 
+    //  * if it does not exist yet then returns it.
+    //  * 
+    //  * @param void
+    //  * @return Farmer
+    //  */
+    // public static function getInstance(string $name, string $description, string $location, string $image)
+    // {
+
+    //     if (is_null(self::$_instance)) {
+    //         self::$_instance = new Farmer(string $name, string $description, string $location, string $image);
+    //     }
+
+    //     return self::$_instance;
+    // }
+
+
     /**
-     * Create a farmer and store it into the Database
+     * Method that create a farmer and store it into the Database
+     *
      * @param array $array
+     * @return void
      */
     public static function createFarmer($array)
     {
@@ -97,8 +192,10 @@ class Farmer
     }
 
     /**
-     * Update a farmer and store it into the Database
+     * Method that update a farmer and update the Database
+     *
      * @param array $array
+     * @return void
      */
     public static function updateFarmer($id)
     {
@@ -110,8 +207,10 @@ class Farmer
     }
 
     /**
-     * Delete a farmer and store it into the Database
+     * Method that delete a farmer and delete it from the Database
+     *
      * @param array $array
+     * @return void
      */
     public static function deleteFarmer($id)
     {
@@ -122,6 +221,12 @@ class Farmer
         $db->req($sql, $array);
     }
 
+    /**
+     * Method that get all farmers from the Database then returns them
+     *
+     * @param void
+     * @return array
+     */
     public static function getAllFarmers()
     {
         $db = new Database;
