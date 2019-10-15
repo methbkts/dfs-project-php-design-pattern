@@ -1,6 +1,16 @@
 /* Custom CSS */
 
 .btn-farmer {
+    max-height: 30% !important;
     background-color: #00881f;
     color: #fff;
+    padding :1rem 1.25rem !important;
+}
+
+i>.fa-seedling{
+    box-sizing: content-box !important;
+}
+
+.bottom-card{
+   margin-block-start: 20% !important;
 }

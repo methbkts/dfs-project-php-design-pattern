@@ -30,7 +30,10 @@ $farmer = Farmer::getAllFarmers();
                                 <h4 class="text-white"><?= $value->name ?> - <span class="text-white-50"><?= $value->location ?></span></h4>
                                 <p class="mb-0 text-muted"><?= $value->description ?></p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
-                                <button type="button" class="btn btn-farmer" style="float: right;"><i class="fas fa-seedling fa-2x"></i></button>
+                                <div class="bottom-card">
+                                    <span class="text-white"> Pour voir les produits que propose <?= $value->name ?> :</span>
+                                    <button type="button" class="btn btn-farmer" value="<?= $value->id ?>" style="float: right;"><i class="fas fa-seedling fa-2x"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
