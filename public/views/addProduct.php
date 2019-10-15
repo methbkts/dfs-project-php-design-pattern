@@ -35,6 +35,12 @@ $farmer = Farmer::getAllFarmers();
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label for="quantity" class="col-sm-2 col-form-label">Quantite</label>
+                        <div class="col-sm-10">
+                            <input type="quantity" class="form-control" placeholder="quantity" name="quantity" id="quantity">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label for="type_id" class="col-sm-2 col-form-label">Type</label>
                         <div class="col-sm-10">
                             <select name="type_id" id="type_id">

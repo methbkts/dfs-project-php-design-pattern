@@ -28,7 +28,7 @@ $farmerName = Farmer::getName();
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white"><?= $value->name ?> - <span class="text-white-50"><?= $value->price ?></span></h4>
+                                <h4 class="text-white"><?= $value->name ?> - <span class="text-white-50"><?= $value->price ?> - <span class="text-white-50"><?= $value->quantity ?></span></h4>
                                 <p class="mb-0 text-muted"><?= $value->description ?></p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
 

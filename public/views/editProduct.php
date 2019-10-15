@@ -21,11 +21,22 @@ $farmer = Farmer::getAllFarmers();
                             <input type="text" class="form-control" placeholder="nom du produit" name="name" id="name">
                         </div>
                     </div>
-
+                    <div class="form-group row">
+                        <label for="image" class="col-sm-2 col-form-label">Image</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="image du produit" name="image" id="image">
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <label for="price" class="col-sm-2 col-form-label">Prix</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" placeholder="prix du produit" name="price" id="price">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="quantity" class="col-sm-2 col-form-label">Quantite</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="quantite disponible du produit" name="quantity" id="quantity">
                         </div>
                     </div>
                     <div class="form-group row">
