@@ -32,13 +32,26 @@
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/addFarmer">Ajouter un fermier</a>
+                        <a class="nav-link js-scroll-trigger" href="/addFarmer">Ajouter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/editFarmer">Editer un fermier</a>
+                        <a class="nav-link js-scroll-trigger" href="/editFarmer">Editer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/removeFarmer">Supprimer un fermier</a>
+                        <a class="nav-link js-scroll-trigger" href="/removeFarmer">Supprimer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#products">Liste des produits</a>
+                    </li>
+                    <li class="nav-link collapse navbar-collapse">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/addProduct">Ajouter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/editProduct">Editer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/removeProduct">Supprimer</a>
                     </li>
                 </ul>
             </div>
