@@ -194,31 +194,33 @@ class Farmer
     /**
      * Method that update a farmer and update the Database
      *
-     * @param array $array
+     * @param string $name, $description, $location, $image
+     * @param integer $id
      * @return void
      */
-    public static function updateFarmer($id)
+    public static function updateFarmer($id, $name, $description, $location, $image)
     {
-        // $sql = "INSERT INTO farmers (name, description, location, image) VALUES (:name, :description, :location, :image);";
+        $sql = "UPDATE `farmers` SET `name` = '$name', `description` = '$description',`location` = '$location', `image` = '$image' WHERE `id` = $id";
 
-        // Insert into DB
+        // Update the DB
         $db = new Database;
-        $db->req($sql, $array);
+        // $db->req($sql, $array);
+        $db->req($sql);
     }
 
     /**
      * Method that delete a farmer and delete it from the Database
      *
-     * @param array $array
+     * @param integer $id
      * @return void
      */
     public static function deleteFarmer($id)
     {
-        // $sql = "INSERT INTO farmers (name, description, location, image) VALUES (:name, :description, :location, :image);";
+        $sql = "DELETE FROM `farmers` WHERE ((`id` = $id));";
 
-        // Insert into DB
+        // Delete from DB
         $db = new Database;
-        $db->req($sql, $array);
+        $db->req($sql);
     }
 
     /**
@@ -241,20 +243,4 @@ class Farmer
         // Functions::dd($result);
         return $result;
     }
-
-    // public static function getAllRoles()
-    // {
-    //     $db = new Database;
-    //     $sql = "select * from types order by id";
-    //     $result = $db->req($sql);
-    //     return $result;
-    // }
-
-    // public static function getAllRaces()
-    // {
-    //     $db = new Database;
-    //     $sql = "select * from products order by id";
-    //     $result = $db->req($sql);
-    //     return $result;
-    // }
 }

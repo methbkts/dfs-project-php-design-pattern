@@ -2,48 +2,123 @@
 
 class Product
 {
-    // Attributes
+    /**
+     * @var Product
+     * @access private
+     * @static
+     */
+    private static $_instance = null;
+
+    /**
+     * @var string
+     * @access protected
+     */
     protected $name;
+
+    /**
+     * @var float
+     * @access protected
+     */
     protected $price;
+
+    /**
+     * @var string
+     * @access protected
+     */
     protected $image;
+
+    /**
+     * @var integer
+     * @access protected
+     */
     protected $quantity;
+
+    /**
+     * @var integer
+     * @access protected
+     */
     protected $type_id;
+
+    /**
+     * @var integer
+     * @access protected
+     */
     protected $farmer_id;
 
-    // Getters
-    // Get the Product name.
+
+    /**
+     * Method that returns the product's name
+     *
+     * @param void
+     * @return string
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
-    // Get the Product price level.
-    public function getPrice(): ?int
+
+    /**
+     * Method that returns the product's price
+     *
+     * @param void
+     * @return float
+     */
+    public function getPrice(): ?float
     {
         return $this->price;
     }
-    // Get the Product image.
+
+    /**
+     * Method that returns the product's image
+     *
+     * @param void
+     * @return string
+     */
     public function getImage(): ?string
     {
         return $this->image;
     }
-    // Get the Product quantity level.
+
+    /**
+     * Method that returns the product's quantity
+     *
+     * @param void
+     * @return integer
+     */
     public function getQuantity(): ?int
     {
         return $this->quantity;
     }
-    // Get the Product type.
+
+    /**
+     * Method that returns the product's type id
+     *
+     * @param void
+     * @return integer
+     */
     public function getType(): ?int
     {
         return $this->type_id;
     }
-    // Get the Product farmer.
-    public function getRace(): ?int
+
+    /**
+     * Method that returns the product's farmer id
+     *
+     * @param void
+     * @return integer
+     */
+    public function getFarmer(): ?int
     {
         return $this->farmer_id;
     }
 
-    // Setters
-    // Set the Product name.
+
+    /**
+     * Method that set the product's name
+     *
+     * @param string $name
+     * @return void
+     */
     public function setName($name)
     {
         if (!is_string($name)) {
@@ -51,15 +126,27 @@ class Product
         }
         $this->name = $name;
     }
-    // Set the Product price.
+
+    /**
+     * Method that set the product's price
+     *
+     * @param float $price
+     * @return void
+     */
     public function setPrice($price)
     {
-        if (!is_string($price)) {
-            throw new Exception('$price must be a string!');
+        if (!is_float($price)) {
+            throw new Exception('$price must be a float!');
         }
         $this->price = $price;
     }
-    // Set the Product image.
+
+    /**
+     * Method that set the product's image
+     *
+     * @param string $image
+     * @return void
+     */
     public function setImage($image)
     {
         if (!is_string($image)) {
@@ -67,40 +154,65 @@ class Product
         }
         $this->image = $image;
     }
-    // Set the quantity.
+
+    /**
+     * Method that set the product's quantity
+     *
+     * @param integer $quantity
+     * @return void
+     */
     public function setQuantity($quantity)
     {
-        if (!is_string($quantity)) {
-            throw new Exception('$quantity must be a int!');
+        if (!is_integer($quantity)) {
+            throw new Exception('$quantity must be an integer!');
         }
         $this->quantity = $quantity;
     }
-    // Set the Product type.
-    public function setRole($type_id)
+
+    /**
+     * Method that set the product's type id
+     *
+     * @param integer $type_id
+     * @return void
+     */
+    public function setType($type_id)
     {
-        if (!is_int($type_id)) {
+        if (!is_integer($type_id)) {
             throw new Exception('$type_id must be an integer!');
         }
         $this->type_id = $type_id;
     }
-    // Set the Product farmer.
+
+    /**
+     * Method that set the product's farmer id
+     *
+     * @param integer $farmer_id
+     * @return void
+     */
     public function setFarmer($farmer_id)
     {
-        if (!is_int($farmer_id)) {
+        if (!is_integer($farmer_id)) {
             throw new Exception('$farmer_id must be an integer!');
         }
         $this->farmer_id = $farmer_id;
     }
 
-    // Construct
-    public function __construct(string $name, int $price, string $image, int $quantity, int $type_id, int $farmer_id)
+    /**
+     * Class Constructor
+     *
+     * @param string $name, $image
+     * @param float $price
+     * @param integer $quantity, $type_id, $farmer_id
+     * @return void
+     */
+    public function __construct(string $name, float $price, string $image, int $quantity, int $type_id, int $farmer_id)
     {
         $this->setName($name);
         $this->setPrice($price);
         $this->setImage($image);
         $this->setQuantity($quantity);
-        $this->setRole($type_id);
-        $this->setRace($farmer_id);
+        $this->setType($type_id);
+        $this->setFarmer($farmer_id);
 
         $array = array(
             ":name" => $name,
@@ -114,10 +226,29 @@ class Product
         Farmer::createProduct($array);
     }
 
-    // Other Methods
+    // /**
+    //  * Method that creates the single instance of the class 
+    //  * if it does not exist yet then returns it.
+    //  * 
+    //  * @param void
+    //  * @return Farmer
+    //  */
+    // public static function getInstance(string $name, string $description, string $location, string $image)
+    // {
+
+    //     if (is_null(self::$_instance)) {
+    //         self::$_instance = new Farmer(string $name, string $description, string $location, string $image);
+    //     }
+
+    //     return self::$_instance;
+    // }
+
+
     /**
-     * Create a product and store it into the Database
+     * Method that create a product and store it into the Database
+     *
      * @param array $array
+     * @return void
      */
     public static function createProduct($array)
     {
@@ -129,32 +260,44 @@ class Product
     }
 
     /**
-     * Update a Product and store it into the Database
-     * @param array $array
+     * Method that update a product and update the Database
+     *
+     * @param string $name, $image
+     * @param float $price
+     * @param integer $id, $quantity, $type_id, $farmer_id
+     * @return void
      */
     public static function updateProduct($id, $name, $price, $image, $quantity, $type_id, $farmer_id)
     {
         $sql = "UPDATE `products` SET `name` = '$name', `price` = '$price',`image` = '$image', `quantity` = '$quantity', `type_id` = '$type_id', `farmer_id` = '$farmer_id' WHERE `id` = $id";
 
-        // Insert into DB
+        // Update the DB
         $db = new Database;
         // $db->req($sql, $array);
         $db->req($sql);
     }
 
     /**
-     * Delete a Product and store it into the Database
-     * @param array $array
+     * Method that delete a product and delete it from the Database
+     *
+     * @param integer $id
+     * @return void
      */
     public static function deleteProduct($id)
     {
         $sql = "DELETE FROM `products` WHERE ((`id` = $id));";
 
-        // Insert into DB
+        // Delete from DB
         $db = new Database;
         $db->req($sql);
     }
 
+    /**
+     * Method that get all products from the Database then returns them
+     *
+     * @param void
+     * @return array
+     */
     public static function getAllProducts()
     {
         $db = new Database;
@@ -168,6 +311,12 @@ class Product
         return $result;
     }
 
+    /**
+     * Method that get all products of one farmer from the Database then returns them
+     *
+     * @param integer $id
+     * @return array
+     */
     public static function getProductsByFarmer($id)
     {
         $db = new Database;
@@ -181,18 +330,16 @@ class Product
         return $result;
     }
 
+    /**
+     * Method that get all products types from the Database then returns them
+     *
+     * @param void
+     * @return array
+     */
     public static function getAllTypes()
     {
         $db = new Database;
         $sql = "select * from types order by id";
-        $result = $db->req($sql);
-        return $result;
-    }
-
-    public static function getAllFarmers()
-    {
-        $db = new Database;
-        $sql = "select * from farmers order by id";
         $result = $db->req($sql);
         return $result;
     }
