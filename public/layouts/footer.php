@@ -1,6 +1,6 @@
 <footer class="bg-black small text-center text-white-50">
     <div class="container">
-        <p class="m-0 text-center text-black">Made with <i class="fas fa-heart"></i> by <strong>methbkts</strong></p>
+        <p class="m-0 text-center text-black">Fait avec <i class="fas fa-heart"></i> pars <strong>methbkts</strong> et <strong>lmanso</strong></p>
     </div>
 </footer>
 <script src="public/vendor/jquery/jquery.min.js"></script>
