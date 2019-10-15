@@ -61,7 +61,7 @@ $farmer = Farmer::getAllFarmers();
                                 <?php
                                 foreach ($farmer as $key => $value) {
                                     ?>
-                                    <option value="<?= ++$key ?>"><?= $value->name ?></option>
+                                    <option value="<?= $value->id ?>"><?= $value->name ?></option>
                                 <?php
                                 }
                                 ?>

@@ -252,7 +252,7 @@ class Product
      */
     public static function createProduct($array)
     {
-        $sql = "INSERT INTO products (name, price, image, quantity type_id, farmer_id) VALUES (:name, :price, :image, :quantity, :type_id, :farmer_id);";
+        $sql = "INSERT INTO products (name, price, image, quantity, type_id, farmer_id) VALUES (:name, :price, :image, :quantity, :type_id, :farmer_id);";
 
         // Insert into DB
         $db = new Database;
