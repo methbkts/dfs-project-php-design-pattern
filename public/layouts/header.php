@@ -47,12 +47,6 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/addProduct">Ajouter</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/editProduct">Editer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/removeProduct">Supprimer</a>
-                    </li>
                 </ul>
             </div>
         </div>
