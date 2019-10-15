@@ -6,6 +6,7 @@ class Product
     protected $name;
     protected $price;
     protected $image;
+    protected $quantity;
     protected $type_id;
     protected $farmer_id;
 
@@ -24,6 +25,11 @@ class Product
     public function getImage(): ?string
     {
         return $this->image;
+    }
+    // Get the Product quantity level.
+    public function getQuantity(): ?int
+    {
+        return $this->quantity;
     }
     // Get the Product type.
     public function getType(): ?int
@@ -61,6 +67,14 @@ class Product
         }
         $this->image = $image;
     }
+    // Set the quantity.
+    public function setQuantity($quantity)
+    {
+        if (!is_string($quantity)) {
+            throw new Exception('$quantity must be a int!');
+        }
+        $this->quantity = $quantity;
+    }
     // Set the Product type.
     public function setRole($type_id)
     {
@@ -79,11 +93,12 @@ class Product
     }
 
     // Construct
-    public function __construct(string $name, int $price, string $image, int $type_id, int $farmer_id)
+    public function __construct(string $name, int $price, string $image, int $quantity, int $type_id, int $farmer_id)
     {
         $this->setName($name);
         $this->setPrice($price);
         $this->setImage($image);
+        $this->setQuantity($quantity);
         $this->setRole($type_id);
         $this->setRace($farmer_id);
 
@@ -91,6 +106,7 @@ class Product
             ":name" => $name,
             ":price" => $price,
             ":image" => $image,
+            ":quantity" => $quantity,
             ":type_id" => $type_id,
             ":farmer_id" => $farmer_id,
         );
@@ -105,7 +121,7 @@ class Product
      */
     public static function createProduct($array)
     {
-        $sql = "INSERT INTO products (name, price, image, type_id, farmer_id) VALUES (:name, :price, :image, :type_id, :farmer_id);";
+        $sql = "INSERT INTO products (name, price, image, quantity type_id, farmer_id) VALUES (:name, :price, :image, :quantity, :type_id, :farmer_id);";
 
         // Insert into DB
         $db = new Database;
@@ -116,9 +132,9 @@ class Product
      * Update a Product and store it into the Database
      * @param array $array
      */
-    public static function updateProduct($id, $name, $price, $image, $type_id, $farmer_id)
+    public static function updateProduct($id, $name, $price, $image, $quantity, $type_id, $farmer_id)
     {
-        $sql = "UPDATE `products` SET `name` = '$name', `price` = '$price',`image` = '$image', `type_id` = '$type_id', `farmer_id` = '$farmer_id' WHERE `id` = $id";
+        $sql = "UPDATE `products` SET `name` = '$name', `price` = '$price',`image` = '$image', `quantity` = '$quantity', `type_id` = '$type_id', `farmer_id` = '$farmer_id' WHERE `id` = $id";
 
         // Insert into DB
         $db = new Database;
@@ -142,7 +158,7 @@ class Product
     public static function getAllProducts()
     {
         $db = new Database;
-        $sql = "select product.id, product.name, product.price,
+        $sql = "select product.id, product.name, product.image, product.price, product.quantity,
         types.name as type, farmers.name as farmer from farmers 
         LEFT JOIN types ON product.type_id = types.id 
         LEFT JOIN farmers ON product.farmer_id = farmer.id 
@@ -152,9 +168,10 @@ class Product
         return $result;
     }
 
-    public static function getProductsByFarmer($id){
+    public static function getProductsByFarmer($id)
+    {
         $db = new Database;
-        $sql = "select product.id, product.name, product.price,
+        $sql = "select product.id, product.name, product.image, product.price, product.quantity,
         types.name as type, farmers.name as farmer from farmers 
         LEFT JOIN types ON product.type_id = types.id 
         LEFT JOIN farmers ON product.farmer_id = farmer.id 
@@ -162,7 +179,6 @@ class Product
         $result = $db->req($sql);
 
         return $result;
-
     }
 
     public static function getAllTypes()
