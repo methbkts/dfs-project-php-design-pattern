@@ -1,32 +1,38 @@
-# dfs-project-php-oop
+# dfs-project-php-designPattern
 
 ## Sujet
 
-Vous allez devoir créer une application qui devra utiliser la POO au maximum.
+Ce sujet est assez spécial puisqu'il sera en lien avec un autre module concernant les frameworks PHP. Vous porterez donc une attention particulière à celui-ci.
 
-Elle devra permettre de C.R.U.D des personnages, et la structure du code vous sera propre.
-Vous pourrez créer plusieurs fichiers pour gérer vos différentes actions, ou tout regrouper dans une seule classe et différentes méthodes (à vous de juger quelle méthode est la plus pertinente)
+Le thème est assez vaste puisque vous avez libre choix de création. Seulement, il va falloir utiliser pas mal de notions dont vous n'êtes pas forcément accoutumés.
 
-Vous devrez donc faire la meilleure utilisation de PHP ainsi que de la P.O.O, et cela passe bien évidemment par la création d'objet et par l'utilisation de méthodes statiques.
+Vous allez devoir réaliser la création d'une application web en créant un "micro-framework", responsive jusqu'à 500px maximum. Vous DEVREZ utiliser un ou deux design patterns dans votre projet, mais pas n'importe lesquels.
+Vous allez devoir penser votre application et tenter de repérer des problèmes pour choisir justement le/les bon/s D.P pour apporter une solution.
 
-Le reste de la validation déprendra de votre créativité et ce que vous ajouterez de manière pertinente à votre projet.
+Par exemple, et chose conseillée, vous pourrez apprendre à utiliser le D.P Singleton, qui permet de n'instancier une classe qu'une seule fois.
+
+En plus de cela, vous allez devoir implémenter des fonctionnalités, comme :
+- Des routes, en intégrant un système de routing
+- Des vues
+- Des controllers
+- D'autres éléments que vous jugerez pertinents.
+
+Étant donné que vous travaillerez avec une base de données, une partie sécurité sera très importante. En effet, vous devrez faire le nécessaire pour protéger vos données, que ce soit
+par le biais d'un formulaire ou lors de requêtes SQL. Soyez D.R.Y et le plus efficace possible.
 
 
-Certains critères seront très surveillés, comme la propreté de votre code (cela passe également par le typehint), la pertinence des données traitées (avec vérification de l'existence de cette donnée, son type, etc)
+Bien évidemment, je vous conseille vivement de travailler en groupe et de manière organisée. Pour cela, la création d'un Trello ou autre pourra vous aider.
+En plus de cette réalisation, vous devrez, dans un README.md, expliquer vos choix. Pourquoi est-ce que vous avez choisi ces design pattern, pour quelle problématique exactement, sur
+quoi porte votre application web, etc.
 
-L'organisation de votre code (fichiers, dossiers) sera évidemment important.
 
 
+Vous avez le temps de le faire, alors ne vous pressez pas, prenez votre temps et surtout, essayer d'en profiter pour vous perfectionner, découvrir des technologies, faire des tests et
+mieux comprendre/travailler votre logique de code.
 
-Quelques notions que nous n'avons pas vu s'ajoutent; vous allez devoir les utiliser dans votre projet.
+Une attention (comme à mon habitude) sera portée sur la structure de votre code, votre logique, sa propreté ainsi que ses bonnes practices, les design patters que vous aurez choisi et les raisons qui vous ont poussés à les utiliser.
 
-Il va falloir que vous utilisiez au moins deux méthodes ABSTRAITES. Leur utilisation vous sera propre, et pour vous aider, sachez qu'elle nécessite quelque chose que nous avons vu hier.
 
-Secondement, sur une page annexe (ou pas), vous devrez vous documenter sur ce qu'est le principe "d'hydratation" et l'utiliser au moins une fois sur un objet pour l'hydrater.
-
-Ensuite, une autre notion va venir s'ajouter, mais vous devrez la trouver par vous-même. Ce qui est demandé, c'est que deux classes différentes puissent utiliser la même méthode, sans que celle-ci soit stockée dans une classe Mère et sans implanter la même méthode de manière brute dans ces deux classes.
-- En guise d'exemple, si vous pouvez faire en sorte que deux classes différentes puissent utiliser une méthode vous connectant à votre DB. 
-- Afin de vous aider, sachez qu'il existe plusieurs manière d'arriver à vos fins pour cette étape. L'unes de ces solutions se nomme "Trait".
-
-Faites bon usage de ces notions que vous allez chercher, afin de les utiliser au mieux.
-A nouveau, faites très attention à la logique de votre code ainsi qu'à sa propreté, une partie de la note sera portée dessus. Utilisez bien le typehint, essayez de sécuriser votre application au maximum (par exemple protéger votre appli des injections SQL, essayez de protéger votre appli des failles XSS, vérifier le traitement de vos données, etc).
+Attention : Une partie "devOps" vous sera utile. Vous devrez également créer des scripts interactifs pour vos collègues, vous permettant de déployer rapidement votre environnement de
+travail en récupérant "automatiquement" le contenu de votre projet à jour (Git ?). Pour ce faire, vous pourrez choisir de travailler avec Vagrant, ou toute autre technologies que vous
+jugez intéressantes ou importantes d'utiliser (par exemple, apprendre à utiliser Docker pour les plus braves).
