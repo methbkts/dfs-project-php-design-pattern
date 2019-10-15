@@ -132,7 +132,7 @@ switch ($request_uri[0]) {
     }
     $name = Functions::test_input($_POST['name']);
     $price = intval($_POST['price']);
-    $price = intval($_POST['quantity']);
+    $quantity = intval($_POST['quantity']);
     $type_id = intval($_POST['type_id']);
     $farmer_id = intval($_POST['farmer_id']);
     $product = new Product($name, $price, $image, $quantity, $type_id, $farmer_id);

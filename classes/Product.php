@@ -223,7 +223,7 @@ class Product
             ":farmer_id" => $farmer_id,
         );
 
-        Farmer::createProduct($array);
+        Product::createProduct($array);
     }
 
     // /**

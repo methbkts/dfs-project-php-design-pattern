@@ -31,7 +31,7 @@ $farmer = Farmer::getAllFarmers();
                     <div class="form-group row">
                         <label for="image" class="col-sm-2 col-form-label">Image</label>
                         <div class="col-sm-10">
-                            <input type="image" class="form-control" placeholder="Image" name="image" id="image">
+                            <input type="text" class="form-control" placeholder="Image" name="image" id="image">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -55,9 +55,9 @@ $farmer = Farmer::getAllFarmers();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="role" class="col-sm-2 col-form-label">Producteur</label>
+                        <label for="farmer_id" class="col-sm-2 col-form-label">Producteur</label>
                         <div class="col-sm-10">
-                            <select name="role" id="role">
+                            <select name="farmer_id" id="farmer_id">
                                 <?php
                                 foreach ($farmer as $key => $value) {
                                     ?>
