@@ -80,30 +80,30 @@ switch ($request_uri[0]) {
     // TODO: crud actions
     // addFarmer Action
   case '/createFarmer':
-    if (empty($_POST['image'])) {
-      $image = 'https://picsum.photos/200/100';
-    } else {
-      $image = Functions::test_input($_POST['image']);
-    }
-    $name = Functions::test_input($_POST['name']);
-    $price = intval($_POST['price']);
-    $type_id = intval($_POST['type_id']);
-    $farmer_id = intval($_POST['farmer_id']);
-    $product = new Farmer($name, $price, $image, $type_id, $farmer_id);
-    require 'controllers/addFarmerAction.php';
+    // if (empty($_POST['image'])) {
+    //   $image = 'https://picsum.photos/200/100';
+    // } else {
+    //   $image = Functions::test_input($_POST['image']);
+    // }
+    // $name = Functions::test_input($_POST['name']);
+    // $price = intval($_POST['price']);
+    // $type_id = intval($_POST['type_id']);
+    // $farmer_id = intval($_POST['farmer_id']);
+    // $product = new Farmer($name, $price, $image, $type_id, $farmer_id);
+    // require 'controllers/addFarmerAction.php';
     header('Location: /');
     break;
 
     // editFarmer Action
   case '/updateFarmer':
-    $name = Functions::test_input($_POST['name']);
-    $price = Functions::test_input($_POST['price']);
-    $image = Functions::test_input($_POST['image']);
-    $type_id = intval($_POST['type_id']);
-    $farmer_id = intval($_POST['farmer_id']);
+    // $name = Functions::test_input($_POST['name']);
+    // $price = Functions::test_input($_POST['price']);
+    // $image = Functions::test_input($_POST['image']);
+    // $type_id = intval($_POST['type_id']);
+    // $farmer_id = intval($_POST['farmer_id']);
 
     // require 'controllers/editCharacterAction.php';
-    Farmer::updateFarmer($request_uri[1], $name, $price, $image, $type_id, $farmer_id);
+    // Farmer::updateFarmer($request_uri[1], $name, $price, $image, $type_id, $farmer_id);
     // Farmer::updateCharacter($request_uri[1]);
     header('Location: /');
     break;
@@ -111,7 +111,7 @@ switch ($request_uri[0]) {
     // removeFarmer Action
   case '/deleteFarmer':
     // require 'controllers/removeProductAction.php';
-    Farmer::deleteFarmer($request_uri[1]);
+    // Farmer::deleteFarmer($request_uri[1]);
     header('Location: /');
     break;
 
