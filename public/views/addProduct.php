@@ -16,14 +16,14 @@ $farmer = Farmer::getAllFarmers();
             <div class="col-xl-6 col-lg-6">
                 <form action="/createProduct" method="post">
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label">Nom</label>
+                        <label for="name" class="col-sm-2 col-form-label">Nom du produit</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" placeholder="Nom du produit" name="name" id="name">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="price" class="col-sm-2 col-form-label">Prix</label>
+                        <label for="price" class="col-sm-2 col-form-label">Prix du produit</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" placeholder="Prix" name="price" id="price">
                         </div>
@@ -35,13 +35,13 @@ $farmer = Farmer::getAllFarmers();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="quantity" class="col-sm-2 col-form-label">Quantite</label>
+                        <label for="quantity" class="col-sm-2 col-form-label">Quantite disponible</label>
                         <div class="col-sm-10">
-                            <input type="quantity" class="form-control" placeholder="quantity" name="quantity" id="quantity">
+                            <input type="quantity" class="form-control" placeholder="quantite" name="quantity" id="quantity">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="type_id" class="col-sm-2 col-form-label">Type</label>
+                        <label for="type_id" class="col-sm-2 col-form-label">Type de produit</label>
                         <div class="col-sm-10">
                             <select name="type_id" id="type_id">
                                 <?php
@@ -55,7 +55,7 @@ $farmer = Farmer::getAllFarmers();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="role" class="col-sm-2 col-form-label">Le fermier</label>
+                        <label for="role" class="col-sm-2 col-form-label">Producteur</label>
                         <div class="col-sm-10">
                             <select name="role" id="role">
                                 <?php

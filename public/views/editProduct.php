@@ -16,7 +16,7 @@ $farmer = Farmer::getAllFarmers();
             <div class="col-xl-6 col-lg-6">
             <form action="/updateProduct?<?php $value->id?>" method="post">
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label">nom</label>
+                        <label for="name" class="col-sm-2 col-form-label">Nom</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" placeholder="nom du produit" name="name" id="name">
                         </div>
@@ -54,7 +54,7 @@ $farmer = Farmer::getAllFarmers();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="role" class="col-sm-2 col-form-label">Le fermier</label>
+                        <label for="role" class="col-sm-2 col-form-label">Le producteur</label>
                         <div class="col-sm-10">
                             <select name="role" id="role">
                                 <?php
