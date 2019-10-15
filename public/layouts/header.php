@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="methbkts">
+    <meta name="author" content="methbkts,lmanso">
     <meta name="description" content="">
-    <title>World of Farmers - <?= $currentPageTitle ?></title>
+    <title>Farming Express - <?= $currentPageTitle ?></title>
     <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
     <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="/">World of Farmers</a>
+            <a class="navbar-brand js-scroll-trigger" href="/">Farming Express</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -41,7 +41,7 @@
                         <a class="nav-link js-scroll-trigger" href="/removeFarmer">Supprimer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/displayProducts#section">Liste des produits</a>
+                        <a class="nav-link js-scroll-trigger" href="/displayProducts">Liste des produits</a>
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <li class="nav-item">
@@ -62,7 +62,7 @@
         <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center">
                 <?php
-                if ($currentPageTitle == "Bienvenue") { ?>
+                if ($currentPageTitle == "Page d'accueil") { ?>
                     <h1 class="mx-auto my-0 text-uppercase mb-4">Bienvenue</h1>
                     <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2> -->
                     <a href="#farmers" class="btn btn-primary js-scroll-trigger">Trouvez votre fermier</a>

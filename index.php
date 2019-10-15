@@ -21,7 +21,7 @@ switch ($request_uri[0]) {
     // Views -->  
     // Home page
   case '/':
-    $currentPageTitle = "Bienvenue";
+    $currentPageTitle = "Page d'accueil";
     require_once 'public/layouts/header.php';
     require_once 'public/views/home.php';
     require_once 'public/layouts/footer.php';
