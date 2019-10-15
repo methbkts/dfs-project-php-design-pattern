@@ -32,7 +32,7 @@ $farmer = Farmer::getAllFarmers();
                                 <!-- <p class="mb-0 text-muted">Product : <?= $value->race ?></p> -->
                                 <!-- <p class="mb-0 text-white-50">Type : <?= $value->role ?></p> -->
                                 <hr class="d-none d-lg-block mb-0 ml-0">
-
+                                <button type="button" class="btn btn-farmer" style="float: right;"><i class="fas fa-seedling fa-2x"></i></button>
                             </div>
                         </div>
                     </div>
