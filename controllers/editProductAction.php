@@ -1,15 +1,10 @@
 <?php
 
-// editFarmerAction
-// $name = $_POST['name'];
-// $weapon = $_POST['weapon'];
-// $special = $_POST['special'];
-// if (empty($_POST['image'])) {
-//     $image = 'https://picsum.photos/300/200';
-// } else {
-//     $image = $_POST['image'];
-// }
-// $role_id = intval($_POST['role']);
-// $race_id = intval($_POST['race']);
+$name = Functions::test_input($_POST['name']);
+$image = Functions::test_input($_POST['image']);
+$price = intval($_POST['price']);
+$quantity = $_POST['quantity'];
+$type_id = intval($_POST['type_id']);
+$farmer_id = intval($_POST['farmer_id']);
 
-Product::updateProduct($request_uri[1]);
+Product::updateProduct($request_uri[1], $name, $price, $image, $quantity, $type_id, $farmer_id);

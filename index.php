@@ -27,7 +27,7 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
-    case '/admin':
+  case '/admin':
     $currentPageTitle = "Page d'administration";
     require_once 'public/layouts/header.php';
     require_once 'public/views/admin.php';
@@ -48,6 +48,14 @@ switch ($request_uri[0]) {
     $farmer_id = $request_uri[1];
     require_once 'public/layouts/header.php';
     require_once 'public/views/displayProductsByFarmer.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
+  case '/updateProductForm':
+    $currentPageTitle = "Modifier le produit";
+    $product_id = $request_uri[1];
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/editProduct.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -147,15 +155,7 @@ switch ($request_uri[0]) {
 
     // editProduct Action
   case '/updateProduct':
-    $name = Functions::test_input($_POST['name']);
-    $image = Functions::test_input($_POST['image']);
-    $price = intval($_POST['price']);
-    $quantity = $_POST['quantity'];
-    $type_id = intval($_POST['type_id']);
-    $farmer_id = intval($_POST['farmer_id']);
-
-    Product::updateProduct($request_uri[1], $name, $price, $image, $quantity, $type_id, $farmer_id);
-    // Farmer::updateCharacter($request_uri[1]);
+    require 'controllers/addProductAction.php';
     header('Location: /');
     break;
 
