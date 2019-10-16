@@ -1,7 +1,8 @@
 <?php
-$type = Product::getAllTypes();
-$farmer = Farmer::getAllFarmers();
+$types = Product::getAllTypes();
+$farmers = Farmer::getAllFarmers();
 ?>
+
 <section id="section" class="projects-section bg-light">
     <div class="container">
 
@@ -9,7 +10,7 @@ $farmer = Farmer::getAllFarmers();
             <div class="col-xl-4 col-lg-3">
                 <div class="featured-text text-center text-lg-left">
                     <h4>Ajouter un produit</h4>
-                    <p class="text-black-50 mb-0">Vous pouvez creer un nouveau produit avec ce formulaire</p>
+                    <p class="text-black-50 mb-0">Vous pouvez créer un nouveau produit en remplissant ce formulaire.</p>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-3"></div>
@@ -25,7 +26,7 @@ $farmer = Farmer::getAllFarmers();
                     <div class="form-group row">
                         <label for="price" class="col-sm-2 col-form-label">Prix du produit</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Prix" name="price" id="price">
+                            <input type="text" class="form-control" placeholder="Prix du produit" name="price" id="price">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -35,19 +36,19 @@ $farmer = Farmer::getAllFarmers();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="quantity" class="col-sm-2 col-form-label">Quantite disponible</label>
+                        <label for="quantity" class="col-sm-2 col-form-label">Quantité disponible</label>
                         <div class="col-sm-10">
-                            <input type="quantity" class="form-control" placeholder="quantite" name="quantity" id="quantity">
+                            <input type="quantity" class="form-control" placeholder="Quantité disponible" name="quantity" id="quantity">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="type_id" class="col-sm-2 col-form-label">Type de produit</label>
+                        <label for="type" class="col-sm-2 col-form-label">Type de produit</label>
                         <div class="col-sm-10">
-                            <select name="type_id" id="type_id">
+                            <select name="type" id="type">
                                 <?php
-                                foreach ($type as $key => $value) {
+                                foreach ($types as $key => $value) {
                                     ?>
-                                    <option value="<?= ++$key ?>"><?= $value->name ?></option>
+                                    <option value="<?= $value->id ?>"><?= $value->name ?></option>
                                 <?php
                                 }
                                 ?>
@@ -55,11 +56,11 @@ $farmer = Farmer::getAllFarmers();
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="farmer_id" class="col-sm-2 col-form-label">Producteur</label>
+                        <label for="farmer" class="col-sm-2 col-form-label">Producteur</label>
                         <div class="col-sm-10">
-                            <select name="farmer_id" id="farmer_id">
+                            <select name="farmer" id="farmer">
                                 <?php
-                                foreach ($farmer as $key => $value) {
+                                foreach ($farmers as $key => $value) {
                                     ?>
                                     <option value="<?= $value->id ?>"><?= $value->name ?></option>
                                 <?php
@@ -75,9 +76,7 @@ $farmer = Farmer::getAllFarmers();
                         </div>
                     </div>
                 </form>
-
             </div>
-
         </div>
     </div>
 </section>

@@ -105,18 +105,8 @@ switch ($request_uri[0]) {
     // TODO: crud actions
     // addFarmer Action
   case '/createFarmer':
-    // if (empty($_POST['image'])) {
-    //   $image = 'https://picsum.photos/200/100';
-    // } else {
-    //   $image = Functions::test_input($_POST['image']);
-    // }
-    // $name = Functions::test_input($_POST['name']);
-    // $price = intval($_POST['price']);
-    // $type_id = intval($_POST['type_id']);
-    // $farmer_id = intval($_POST['farmer_id']);
-    // $product = new Farmer($name, $price, $image, $type_id, $farmer_id);
-    // require 'controllers/addFarmerAction.php';
-    header('Location: /');
+    require 'controllers/addFarmerAction.php';
+    header('Location: /#section');
     break;
 
     // editFarmer Action
