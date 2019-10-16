@@ -35,6 +35,15 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
+    // Farmer Products page
+  case '/displayProductsByFarmer':
+    $currentPageTitle = "Liste des produits du fermier";
+    $farmer_id = $request_uri[1];
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/displayProductsByFarmer.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
     // addFarmer page
   case '/addFarmer':
     $currentPageTitle = "Add Farmer";
@@ -150,11 +159,7 @@ switch ($request_uri[0]) {
     header('Location: /');
     break;
 
-    // displayProductsByFarmer Action
-    case '/displayProductsByFarmer':
-    $id = $request_uri[1];
-    $product = getProductsByFarmer($id);
-    header('Location: /displayProductsByFarmer');
+
 
     // Everything else
   default:

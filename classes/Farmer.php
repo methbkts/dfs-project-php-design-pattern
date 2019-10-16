@@ -243,4 +243,21 @@ class Farmer
         // Functions::dd($result);
         return $result;
     }
+
+        /**
+     * Method that get a farmer from the Database then returns it
+     *
+     * @param integer $id
+     * @return array
+     */
+    public static function getOneFarmer($id)
+    {
+        $db = new Database;
+        $sql = "SELECT farmers.id, farmers.name, farmers.description, farmers.location, farmers.image
+        FROM `farmers`
+        WHERE `id` = $id;";
+        $result = $db->req($sql);
+        // Functions::dd($result);
+        return $result;
+    }
 }

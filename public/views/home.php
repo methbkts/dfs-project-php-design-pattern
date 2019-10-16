@@ -33,7 +33,7 @@ $farmer = Farmer::getAllFarmers();
                                 <br>
                                 <p class="text-white">
                                     Pour voir les produits que propose <?= $value->name ?> :
-                                    <a href="/diplayProductsByFarmer?<?= $value->id ?>"><button type="button" class="btn btn-farmer" value="<?= $value->id ?>" style="float: right;"><i class="fas fa-shopping-basket fa-2x"></i></button></a>
+                                    <a href="/displayProductsByFarmer?<?= $value->id ?>"><button type="button" class="btn btn-farmer" value="<?= $value->id ?>" style="float: right;"><i class="fas fa-shopping-basket fa-2x"></i></button></a>
                                 </p>
                             </div>
                         </div>

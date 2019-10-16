@@ -301,7 +301,7 @@ class Product
     public static function getAllProducts()
     {
         $db = new Database;
-        $sql = "select products.id, products.name, products.image, products.price, products.quantity,
+        $sql = "SELECT products.id, products.name, products.image, products.price, products.quantity,
         types.name as type, farmers.name as farmer from products 
         LEFT JOIN types ON products.type_id = types.id 
         LEFT JOIN farmers ON products.farmer_id = farmers.id 
@@ -320,13 +320,16 @@ class Product
     public static function getProductsByFarmer($id)
     {
         $db = new Database;
-        $sql = "select product.id, product.name, product.image, product.price, product.quantity,
-        types.name as type, farmers.name as farmer from farmers 
-        LEFT JOIN types ON product.type_id = types.id 
-        LEFT JOIN farmers ON product.farmer_id = farmer.id 
-        order by id WHERE ((`id` = $id));";
-        $result = $db->req($sql);
+        $sql = "SELECT products.id, products.name, products.image, products.price, products.quantity,
+        types.name as type, farmers.name as farmer
+        FROM `products`
+        LEFT JOIN types ON products.type_id = types.id 
+        LEFT JOIN farmers ON products.farmer_id = farmers.id
+        WHERE `farmer_id` = $id;";
 
+        // order by id 
+        $result = $db->req($sql);
+        // Functions::dd($result);
         return $result;
     }
 
