@@ -7,4 +7,6 @@ $quantity = $_POST['quantity'];
 $type_id = intval($_POST['type_id']);
 $farmer_id = intval($_POST['farmer_id']);
 
+// Functions::dd($farmer_id);
+
 Product::updateProduct($request_uri[1], $name, $price, $image, $quantity, $type_id, $farmer_id);

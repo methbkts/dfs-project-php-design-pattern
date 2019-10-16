@@ -269,12 +269,13 @@ class Product
      */
     public static function updateProduct($id, $name, $price, $image, $quantity, $type_id, $farmer_id)
     {
-        $sql = "UPDATE `products` SET `name` = '$name', `price` = '$price',`image` = '$image', `quantity` = '$quantity', `type_id` = '$type_id', `farmer_id` = '$farmer_id' WHERE `id` = $id";
+        $sql = "UPDATE `products` SET `name` = '$name', `price` = $price,`image` = '$image', `quantity` = $quantity, `type_id` = $type_id, `farmer_id` = $farmer_id WHERE `id` = $id;";
 
         // Update the DB
         $db = new Database;
         // $db->req($sql, $array);
         $db->req($sql);
+        // Functions::dd($db);
     }
 
     /**

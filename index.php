@@ -150,20 +150,20 @@ switch ($request_uri[0]) {
     // addProduct Action
   case '/createProduct':
     require 'controllers/addProductAction.php';
-    header('Location: /');
+    header('Location: /displayProducts');
     break;
 
     // editProduct Action
   case '/updateProduct':
-    require 'controllers/addProductAction.php';
-    header('Location: /');
+    require 'controllers/editProductAction.php';
+    header('Location: /displayProducts');
     break;
 
     // removeProduct Action
   case '/deleteProduct':
     // require 'controllers/removeProductAction.php';
     Product::deleteProduct($request_uri[1]);
-    header('Location: /');
+    header('Location: /displayProducts');
     break;
 
 
