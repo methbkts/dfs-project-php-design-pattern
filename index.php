@@ -50,7 +50,7 @@ switch ($request_uri[0]) {
     require_once 'public/views/displayProductsByFarmer.php';
     require_once 'public/layouts/footer.php';
     break;
-    
+
     // addFarmer page
   case '/addFarmer':
     $currentPageTitle = "Add Farmer";
@@ -138,6 +138,7 @@ switch ($request_uri[0]) {
 
     // editProduct Action
   case '/updateProduct':
+    $product_id = $request_uri[1];
     require 'controllers/editProductAction.php';
     header('Location: /displayProducts');
     break;
@@ -148,7 +149,6 @@ switch ($request_uri[0]) {
     Product::deleteProduct($request_uri[1]);
     header('Location: /displayProducts');
     break;
-
 
 
     // Everything else
