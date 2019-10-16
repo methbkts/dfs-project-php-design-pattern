@@ -26,6 +26,7 @@ i>.fa-seedling{
     /* margin-right: 5%; */
 }
 
+
 .imgDisplayProductsByFarmer{
     height: 100%;
     width: 100%;
@@ -33,4 +34,8 @@ i>.fa-seedling{
     -moz-border-radius: 32px 32px 32px 32px;
     -webkit-border-radius: 32px 32px 32px 32px;
 
+}
+
+.updateForm{
+    margin-top: 2%;
 }
