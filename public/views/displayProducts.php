@@ -35,7 +35,7 @@ $farmers = Farmer::getAllFarmers();
                                 <hr class="d-none d-lg-block mb-0 ml-0">
                                 <p>
                                     <button type="button" class="btn btn-info"><i class="fas fa-binoculars"></i></button>
-                                    <a href="/updateProductForm?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-warning"><i class="far fa-edit"></i></button></a>
+                                    <a href="/editProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-warning"><i class="far fa-edit"></i></button></a>
                                     <a href="/deleteProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a>
                                 </p>
                             </div>

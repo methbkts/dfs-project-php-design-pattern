@@ -50,15 +50,7 @@ switch ($request_uri[0]) {
     require_once 'public/views/displayProductsByFarmer.php';
     require_once 'public/layouts/footer.php';
     break;
-
-  case '/updateProductForm':
-    $currentPageTitle = "Modifier le produit";
-    $product_id = $request_uri[1];
-    require_once 'public/layouts/header.php';
-    require_once 'public/views/editProduct.php';
-    require_once 'public/layouts/footer.php';
-    break;
-
+    
     // addFarmer page
   case '/addFarmer':
     $currentPageTitle = "Add Farmer";
@@ -93,7 +85,8 @@ switch ($request_uri[0]) {
 
     // editProduct page
   case '/editProduct':
-    $currentPageTitle = "Edit Product";
+    $currentPageTitle = "Modifier le produit";
+    $product_id = $request_uri[1];
     require_once 'public/layouts/header.php';
     require_once 'public/views/editProduct.php';
     require_once 'public/layouts/footer.php';
