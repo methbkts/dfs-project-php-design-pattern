@@ -19,3 +19,18 @@ i>.fa-seedling{
 .bottom-card{
    margin-block-start: 20% !important;
 }
+
+.contDisplayProductsByFarmer{
+    height: 40%;
+    width: 20%;
+    margin-right: 5%;
+}
+
+.imgDisplayProductsByFarmer{
+    height: 100%;
+    width: 100%;
+    border-radius: 32px 32px 32px 32px;
+    -moz-border-radius: 32px 32px 32px 32px;
+    -webkit-border-radius: 32px 32px 32px 32px;
+
+}
