@@ -1,13 +1,17 @@
 <?php
 
+/*
+ * Object that represents a Farmer. 
+ * 
+ */
 class Farmer
 {
-    /**
-     * @var Farmer
-     * @access private
-     * @static
-     */
-    private static $_instance = null;
+    // /**
+    //  * @var Farmer
+    //  * @access private
+    //  * @static
+    //  */
+    // private static $_instance = null;
 
     /**
      * @var string
@@ -158,6 +162,7 @@ class Farmer
         Farmer::createFarmer($array);
     }
 
+
     // /**
     //  * Method that creates the single instance of the class 
     //  * if it does not exist yet then returns it.
@@ -177,22 +182,20 @@ class Farmer
 
 
     /**
-     * Method that create a farmer and store it into the Database
+     * Method that add a farmer to the Database
      *
      * @param array $array
      * @return void
      */
     public static function createFarmer($array)
     {
-        $sql = "INSERT INTO farmers (name, description, location, image) VALUES (:name, :description, :location, :image);";
-
-        // Insert into DB
         $db = new Database;
+        $sql = "INSERT INTO farmers (name, description, location, image) VALUES (:name, :description, :location, :image);";
         $db->req($sql, $array);
     }
 
     /**
-     * Method that update a farmer and update the Database
+     * Method that update a farmer in the Database
      *
      * @param string $name, $description, $location, $image
      * @param integer $id
@@ -200,26 +203,21 @@ class Farmer
      */
     public static function updateFarmer($id, $name, $description, $location, $image)
     {
-        $sql = "UPDATE `farmers` SET `name` = '$name', `description` = '$description',`location` = '$location', `image` = '$image' WHERE `id` = $id";
-
-        // Update the DB
         $db = new Database;
-        // $db->req($sql, $array);
+        $sql = "UPDATE `farmers` SET `name` = '$name', `description` = '$description',`location` = '$location', `image` = '$image' WHERE `id` = $id";
         $db->req($sql);
     }
 
     /**
-     * Method that delete a farmer and delete it from the Database
+     * Method that delete a farmer from the Database
      *
      * @param integer $id
      * @return void
      */
     public static function deleteFarmer($id)
     {
-        $sql = "DELETE FROM `farmers` WHERE ((`id` = $id));";
-
-        // Delete from DB
         $db = new Database;
+        $sql = "DELETE FROM `farmers` WHERE ((`id` = $id));";
         $db->req($sql);
     }
 
@@ -244,7 +242,7 @@ class Farmer
         return $result;
     }
 
-        /**
+    /**
      * Method that get a farmer from the Database then returns it
      *
      * @param integer $id

@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Personnal functions.
+ * 
+ */
 class Functions
 {
     public static function br()

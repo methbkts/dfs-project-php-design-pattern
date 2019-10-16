@@ -1,13 +1,17 @@
 <?php
 
+/*
+ * Object that represents a Product. 
+ * 
+ */
 class Product
 {
-    /**
-     * @var Product
-     * @access private
-     * @static
-     */
-    private static $_instance = null;
+    // /**
+    //  * @var Product
+    //  * @access private
+    //  * @static
+    //  */
+    // private static $_instance = null;
 
     /**
      * @var string
@@ -226,6 +230,7 @@ class Product
         Product::createProduct($array);
     }
 
+
     // /**
     //  * Method that creates the single instance of the class 
     //  * if it does not exist yet then returns it.
@@ -245,22 +250,20 @@ class Product
 
 
     /**
-     * Method that create a product and store it into the Database
+     * Method that add a product to the Database
      *
      * @param array $array
      * @return void
      */
     public static function createProduct($array)
     {
-        $sql = "INSERT INTO products (name, price, image, quantity, type_id, farmer_id) VALUES (:name, :price, :image, :quantity, :type_id, :farmer_id);";
-
-        // Insert into DB
         $db = new Database;
+        $sql = "INSERT INTO products (name, price, image, quantity, type_id, farmer_id) VALUES (:name, :price, :image, :quantity, :type_id, :farmer_id);";
         $db->req($sql, $array);
     }
 
     /**
-     * Method that update a product and update the Database
+     * Method that update a product in the Database
      *
      * @param string $name, $image
      * @param float $price
@@ -269,27 +272,21 @@ class Product
      */
     public static function updateProduct($id, $name, $price, $image, $quantity, $type_id, $farmer_id)
     {
-        $sql = "UPDATE `products` SET `name` = '$name', `price` = $price,`image` = '$image', `quantity` = $quantity, `type_id` = $type_id, `farmer_id` = $farmer_id WHERE `id` = $id;";
-
-        // Update the DB
         $db = new Database;
-        // $db->req($sql, $array);
+        $sql = "UPDATE `products` SET `name` = '$name', `price` = $price,`image` = '$image', `quantity` = $quantity, `type_id` = $type_id, `farmer_id` = $farmer_id WHERE `id` = $id;";
         $db->req($sql);
-        // Functions::dd($db);
     }
 
     /**
-     * Method that delete a product and delete it from the Database
+     * Method that delete a product from the Database
      *
      * @param integer $id
      * @return void
      */
     public static function deleteProduct($id)
     {
-        $sql = "DELETE FROM `products` WHERE ((`id` = $id));";
-
-        // Delete from DB
         $db = new Database;
+        $sql = "DELETE FROM `products` WHERE ((`id` = $id));";
         $db->req($sql);
     }
 
@@ -312,6 +309,12 @@ class Product
         return $result;
     }
 
+    /**
+     * Method that get a product from the Database then returns it
+     *
+     * @param integer $id
+     * @return array
+     */
     public static function getOneProduct($id)
     {
         $db = new Database;
@@ -324,7 +327,6 @@ class Product
         // Functions::dd($result);
         return $result[0];
     }
-
 
     /**
      * Method that get all products of one farmer from the Database then returns them
@@ -341,8 +343,6 @@ class Product
         LEFT JOIN types ON products.type_id = types.id 
         LEFT JOIN farmers ON products.farmer_id = farmers.id
         WHERE `farmer_id` = $id;";
-
-        // order by id 
         $result = $db->req($sql);
         // Functions::dd($result);
         return $result;

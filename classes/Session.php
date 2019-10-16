@@ -1,8 +1,9 @@
 <?php
+
 /*
-* Classe utilitaire permettant de gérer la session
-*
-*/
+ * Classe utilitaire permettant de gérer la session
+ *
+ */
 class Session
 {
 

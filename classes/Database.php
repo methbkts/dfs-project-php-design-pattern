@@ -1,18 +1,60 @@
 <?php
 
+/*
+ * Represents a connection between PHP and a database server. 
+ *
+ * Usage:
+ * 
+ * $db = new Database;
+ * $sql = "SELECT * FROM products;";
+ * $result = $db->req($sql);
+ * return $result[0];
+ * 
+ */
 class Database
 {
-    // Attributes
+    /**
+     * @var string
+     * @access private
+     */
     private $db = 'mysql:host=localhost;dbname=app_db';
+
+    /**
+     * @var string
+     * @access private
+     */
     private $login = 'root';
+
+    /**
+     * @var string
+     * @access private
+     */
     private $pass = '0000';
+
+    /**
+     * @var PDO
+     * @access protected
+     */
     protected $connec;
 
+
+    /**
+     * Class Constructor
+     *
+     * @param void
+     * @return void
+     */
     public function __construct()
     {
         $this->openConnexion();
     }
 
+    /**
+     * Method that open a connexion to the Database
+     *
+     * @param void
+     * @return void
+     */
     private function openConnexion()
     {
         try {
@@ -26,6 +68,15 @@ class Database
         }
     }
 
+    /**
+     * Method that prepare a request, 
+     * execute it from the Database 
+     * then fetch the result and return it
+     * 
+     * @param string $sql
+     * @param array $param
+     * @return array
+     */
     public function req($sql, array $param = null)
     {
         $stmt = $this->connec->prepare($sql);
@@ -41,7 +92,3 @@ class Database
         $this->connec = null;
     }
 }
-
-// Usage
-// $db = new Database();
-// $db->req("SELECT * FROM client");
