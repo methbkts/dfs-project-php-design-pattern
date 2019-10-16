@@ -257,7 +257,7 @@ class Farmer
         FROM `farmers`
         WHERE `id` = $id;";
         $result = $db->req($sql);
-        // Functions::dd($result);
-        return $result;
+        // Functions::dd($result[0]);
+        return $result[0];
     }
 }

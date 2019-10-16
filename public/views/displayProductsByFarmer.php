@@ -10,7 +10,8 @@ $farmer = Farmer::getOneFarmer($farmer_id);
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <!-- TODO: afficher le name de $farmer ici -->
-                    <h4>Liste des porduits propose par <?= $farmer->name ?></h4>
+
+                    <h4>Liste des porduits propose par <?= $farmer->name?></h4>
                     <p class="text-black-50 mb-0">Tous les produits sont disponible.</p>
                 </div>
             </div>
