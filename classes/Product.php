@@ -319,7 +319,7 @@ class Product
     {
         $db = new Database;
         $sql = "SELECT products.id as id, products.name, products.image, products.price, products.quantity,
-        types.name as type, farmers.name as farmer from products 
+        types.name as type, types.id as type_id, farmers.name as farmer, farmers.id as farmer_id from products 
         LEFT JOIN types ON products.type_id = types.id 
         LEFT JOIN farmers ON products.farmer_id = farmers.id 
         WHERE products.id = $id;";
