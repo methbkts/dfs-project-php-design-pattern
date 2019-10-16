@@ -311,6 +311,20 @@ class Product
         return $result;
     }
 
+    public static function getOneProduct($id)
+    {
+        $db = new Database;
+        $sql = "SELECT products.id as id, products.name, products.image, products.price, products.quantity,
+        types.name as type, farmers.name as farmer from products 
+        LEFT JOIN types ON products.type_id = types.id 
+        LEFT JOIN farmers ON products.farmer_id = farmers.id 
+        WHERE products.id = $id;";
+        $result = $db->req($sql);
+        // Functions::dd($result);
+        return $result[0];
+    }
+
+
     /**
      * Method that get all products of one farmer from the Database then returns them
      *
