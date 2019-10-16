@@ -36,3 +36,35 @@ Une attention (comme à mon habitude) sera portée sur la structure de votre cod
 Attention : Une partie "devOps" vous sera utile. Vous devrez également créer des scripts interactifs pour vos collègues, vous permettant de déployer rapidement votre environnement de
 travail en récupérant "automatiquement" le contenu de votre projet à jour (Git ?). Pour ce faire, vous pourrez choisir de travailler avec Vagrant, ou toute autre technologies que vous
 jugez intéressantes ou importantes d'utiliser (par exemple, apprendre à utiliser Docker pour les plus braves).
+
+Thème du site
+===
+
+**Farming express** est un site pour promouvoir l'agriculture locale a destination des agriculteurs et du grand public. 
+Nous pensons que chaque agriculteur et unique, qu'il a une histoire à raconter avec ses produits mais qu'il n'a souvent pas le temps de ce consacré à la diffusion de celle-ci.
+
+Le grand public est de plus en plus sensibiliser aux questions écologique et notamment à la consomation de produits locaux issue d'une culture responsable. Malgrès la volonté de changer les habitudes et de s'engager durablement dans une démarche éco-responsable un problème persiste, celui du temps ! Le temps de trouver un agriculteur, d'aller chercher les produits...
+Dans une société de plus en plus énergivore, dans des entreprises qui demande de plus en plus d'heures. Le temps est devenu un luxe et celui que l'on prend avec ces proches est précieux.
+
+**Farming express** bien conscien des nouveaux enjeux de société propose une solution.
+
+Un lieux permettant la rencontre entre agriculteurs et grand public, un lieu où la sensibilisation continue. Un endroit où les agriculteurs pourront facilement mettre leurs produits en avant et les vendres sans prendre sur leurs temps de travail. Où le grand public trouvera les différents produits disponible près de chez eux et comprendrons l'histoire derrières chacun d'eux.
+
+Ce lieux c'est **Farming express**.
+
+design pattern
+===
+Outils utilisés
+===
+- Php,
+- Bootstrap,
+- Adminer,
+- MySql,
+- Design pattern,
+- Trello,
+- Github,
+- Unsplash,
+- Fontawesome.
+
+Problématiques
+===
