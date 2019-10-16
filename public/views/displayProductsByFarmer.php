@@ -7,7 +7,7 @@ $farmer = Farmer::getOneFarmer($farmer_id);
     <div class="container">
 
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-            <div class="contDisplayProductsByFarmer">
+            <div class="contDisplayProductsByFarmer mr-4">
                 <img class="imgDisplayProductsByFarmer" src="<?= $farmer->image ?>" alt="">
             </div>
             <div class="col-xl-4 col-lg-5">
