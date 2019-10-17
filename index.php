@@ -45,7 +45,7 @@ switch ($request_uri[0]) {
   case '/displayFarmers':
     $currentPageTitle = "Liste des producteurs";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/displayFarmers.php';
+    require_once 'public/views/farmers/displayFarmers.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -53,7 +53,7 @@ switch ($request_uri[0]) {
   case '/displayProducts':
     $currentPageTitle = "Liste des produits";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/displayProducts.php';
+    require_once 'public/views/products/displayProducts.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -63,7 +63,7 @@ switch ($request_uri[0]) {
     $currentPageTitle = "Liste des produits du fermier";
     $farmer_id = $request_uri[1];
     require_once 'public/layouts/header.php';
-    require_once 'public/views/displayProductsByFarmer.php';
+    require_once 'public/views/products/displayProductsByFarmer.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -71,7 +71,7 @@ switch ($request_uri[0]) {
   case '/addFarmer':
     $currentPageTitle = "Ajouter un producteur";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/addFarmer.php';
+    require_once 'public/views/farmers/addFarmer.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -79,23 +79,23 @@ switch ($request_uri[0]) {
   case '/editFarmer':
     $currentPageTitle = "Modifier le producteur";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/editFarmer.php';
+    require_once 'public/views/farmers/editFarmer.php';
     require_once 'public/layouts/footer.php';
     break;
 
-    // removeFarmer page
-  case '/removeFarmer':
-    $currentPageTitle = "Enlever le producteur";
-    require_once 'public/layouts/header.php';
-    require_once 'public/views/removeFarmer.php';
-    require_once 'public/layouts/footer.php';
-    break;
+  //   // removeFarmer page
+  // case '/removeFarmer':
+  //   $currentPageTitle = "Enlever le producteur";
+  //   require_once 'public/layouts/header.php';
+  //   require_once 'public/views/farmers/removeFarmer.php';
+  //   require_once 'public/layouts/footer.php';
+  //   break;
 
     // addProduct page
   case '/addProduct':
     $currentPageTitle = "Ajouter un produit";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/addProduct.php';
+    require_once 'public/views/products/addProduct.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -104,7 +104,7 @@ switch ($request_uri[0]) {
     $currentPageTitle = "Modifier le produit";
     $product_id = $request_uri[1];
     require_once 'public/layouts/header.php';
-    require_once 'public/views/editProduct.php';
+    require_once 'public/views/products/editProduct.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -112,7 +112,7 @@ switch ($request_uri[0]) {
   case '/removeProduct':
     $currentPageTitle = "Enlever le produit";
     require_once 'public/layouts/header.php';
-    require_once 'public/views/removeProduct.php';
+    require_once 'public/views/products/removeProduct.php';
     require_once 'public/layouts/footer.php';
     break;
 
@@ -121,32 +121,32 @@ switch ($request_uri[0]) {
     // TODO: crud actions
     // addFarmer Action
   case '/createFarmer':
-    require 'controllers/addFarmerAction.php';
+    require 'controllers/farmers/addFarmerAction.php';
     header('Location: /displayFarmers');
     break;
 
     // editFarmer Action
   case '/updateFarmer':
-    require 'controllers/editFarmerAction.php';
+    require 'controllers/farmers/editFarmerAction.php';
     header('Location: /displayFarmers');
     break;
 
     // removeFarmer Action
   case '/deleteFarmer':
-    require 'controllers/removeFarmerAction.php';
+    require 'controllers/farmers/removeFarmerAction.php';
     header('Location: /displayFarmers');
     break;
 
     // addProduct Action
   case '/createProduct':
-    require 'controllers/addProductAction.php';
+    require 'controllers/products/addProductAction.php';
     header('Location: /displayProducts');
     break;
 
     // editProduct Action
   case '/updateProduct':
     $product_id = $request_uri[1];
-    require 'controllers/editProductAction.php';
+    require 'controllers/products/editProductAction.php';
     header('Location: /displayProducts');
     break;
 
