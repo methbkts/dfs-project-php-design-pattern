@@ -36,7 +36,7 @@ $farmers = Farmer::getAllFarmers();
                                 <p class="mb-0 text-muted"> <span class="text-white-50">Les <?= $value->name ?> de <?= $value->farmer ?> sont propose a : <?= $value->price ?> €</span>, il en reste : <span class="text-white-50"><?= $value->quantity ?></p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
                                 <p class="text-white">Voir les produits proposés par <?= $value->farmer ?>
-                                    <a href="/displayProductsByFarmer?<?= $value->farmer_id ?>"><button type="button" class="btn btn-farmer" value="<?= $value->farmer_id ?>"><i class="fas fa-binoculars"></i></button></a>
+                                    <a href="/displayProductsByFarmer?<?= $value->farmer_id ?>"><button type="button" class="btn btn-farmer" value="<?= $value->farmer_id ?>"><i class="fas fa-shopping-basket"></i></button></a>
                                     <!-- <button type="button" class="btn btn-info"><i class="fas fa-binoculars"></i></button> -->
 
                                 </p>
