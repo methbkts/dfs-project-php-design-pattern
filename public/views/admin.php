@@ -13,7 +13,8 @@ $nbFarmers = Farmer::countFarmers();
                 <div class="bg-black text-center h-100 project collapse-admin count-product shadow-4dp">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Il y a <?php foreach ($nbProducts as $key => $value) : echo $value; endforeach ?> produits en vente actuellement</h4>
+                            <h4 class="text-white">Il y a <?php foreach ($nbProducts as $key => $value) : echo $value;
+                                                            endforeach ?> produits en vente actuellement</h4>
                             <p class="mb-0 text-white"><i class="fas fa-seedling fa-4x"></i></p>
                             <hr class="d-none d-lg-block mb-0 mr-0">
                         </div>
@@ -25,7 +26,8 @@ $nbFarmers = Farmer::countFarmers();
                 <div class="bg-black text-center h-100 project collapse-admin count-farmer shadow-4dp">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Il y a <?php foreach ($nbFarmers as $key => $value) : echo $value; endforeach ?> producteurs actuellement enregistrés</h4>
+                            <h4 class="text-white">Il y a <?php foreach ($nbFarmers as $key => $value) : echo $value;
+                                                            endforeach ?> producteurs actuellement enregistrés</h4>
                             <p class="mb-0 text-white"><i class="fas fa-users fa-4x"></i></p>
                             <hr class="d-none d-lg-block mb-0 mr-0">
                         </div>
@@ -43,8 +45,10 @@ $nbFarmers = Farmer::countFarmers();
                     <p class="text-black-50 mb-0">Les fermiers qui travailles en cooperation avec notre entreprise.</p>
                 </div>
             </div>
+            <div class="col-xl-4 col-lg-5">
+                <a href="/createFarmer"><button type="button" value="" class="btn btn-success shadow-2dp"><i class="fas fa-user-plus fa-2x"></i></button></a>
+            </div>
         </div>
-
         <table class="table table-striped shadow-4dp">
             <thead class="thead-dark">
                 <tr>
