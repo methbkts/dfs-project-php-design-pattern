@@ -13,13 +13,12 @@ $farmer = Farmer::getAllFarmers();
             </div>
         </div>
 
-        <!-- Project One Row -->
         <?php
 
         foreach ($farmer as $key => $value) {
 
             ?>
-            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="row justify-content-center no-gutters mb-5">
                 <div class="col-lg-6">
                     <img class="img-fluid" src="<?= $value->image ?>" alt="">
                 </div>
