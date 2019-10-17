@@ -1,7 +1,7 @@
 /* Custom CSS */
 
 .img-fluid {
-    height: 100%;
+    /* height: 100%; */
 }
 
 .btn-farmer {
@@ -10,10 +10,10 @@
     color: white;
 }
 
-.cont-btn-displayProducts button{
-    /* height: 10%;
-    width: 10%; */
-}
+/* .cont-btn-displayProducts button{
+    height: 10%;
+    width: 10%;
+} */
 
 i>.fa-seedling{
     box-sizing: content-box !important;
