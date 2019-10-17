@@ -361,4 +361,18 @@ class Product
         $result = $db->req($sql);
         return $result;
     }
+
+    /**
+     * Method that count products from the Database then returns them
+     *
+     * @param void
+     * @return int
+     */
+    public static function countProducts()
+    {
+        $db = new Database;
+        $sql = "SELECT COUNT(id) FROM products;";
+        $result = $db->req($sql);
+        return $result[0];
+    }
 }
