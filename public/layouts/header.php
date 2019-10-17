@@ -28,16 +28,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/">Trouvez votre fermier</a>
+                        <a class="nav-link js-scroll-trigger" href="/displayFarmers#section">Liste des producteurs</a>
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/displayProducts">Liste des produits</a>
+                        <a class="nav-link js-scroll-trigger" href="/displayProducts#section">Liste des produits</a>
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <!-- TODO: ajouter condition si utilisateur lambda pour aller sur sa page de profil -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/admin">Profil</a>
+                        <a class="nav-link js-scroll-trigger" href="/profile">Profil</a>
                     </li>
                     <!-- <li class="nav-item">
                                         <a class="nav-link js-scroll-trigger" href="/addFarmer">Ajouter</a>
@@ -63,7 +63,7 @@
                 if ($currentPageTitle == "Page d'accueil") { ?>
                     <h1 class="mx-auto my-0 text-uppercase mb-4">Bienvenue</h1>
                     <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2> -->
-                    <a href="#section" class="btn btn-primary js-scroll-trigger">Trouvez votre fermier</a>
+                    <a href="#section" class="btn btn-primary js-scroll-trigger">Voir nos prix</a>
                 <?php
                 } else if ($currentPageTitle == "Error 404") { ?>
                     <h1 class="mx-auto my-0 text-uppercase mb-4"><?= $currentPageTitle ?></h1>

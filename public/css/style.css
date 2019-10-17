@@ -1,5 +1,9 @@
 /* Custom CSS */
 
+.img-fluid {
+    height: 100%;
+}
+
 .btn-farmer {
     padding: 10px !important;
     background-color: #64a19d;

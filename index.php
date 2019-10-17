@@ -27,6 +27,13 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
+  case '/profile':
+    $currentPageTitle = "Votre profil";
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/profile.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
   case '/admin':
     $currentPageTitle = "Page d'administration";
     require_once 'public/layouts/header.php';
@@ -34,7 +41,15 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
-    // Product page
+    // Farmers page
+  case '/displayFarmers':
+    $currentPageTitle = "Liste des producteurs";
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/displayFarmers.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
+    // Products page
   case '/displayProducts':
     $currentPageTitle = "Liste des produits";
     require_once 'public/layouts/header.php';
@@ -42,8 +57,9 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
-    // Farmer Products page
+    // One Farmer's Products page
   case '/displayProductsByFarmer':
+    // remplacer 'fermier' par le nom du producteur
     $currentPageTitle = "Liste des produits du fermier";
     $farmer_id = $request_uri[1];
     require_once 'public/layouts/header.php';
@@ -53,7 +69,7 @@ switch ($request_uri[0]) {
 
     // addFarmer page
   case '/addFarmer':
-    $currentPageTitle = "Add Farmer";
+    $currentPageTitle = "Ajouter un producteur";
     require_once 'public/layouts/header.php';
     require_once 'public/views/addFarmer.php';
     require_once 'public/layouts/footer.php';
@@ -61,7 +77,7 @@ switch ($request_uri[0]) {
 
     // editFarmer page
   case '/editFarmer':
-    $currentPageTitle = "Edit Farmer";
+    $currentPageTitle = "Modifier le producteur";
     require_once 'public/layouts/header.php';
     require_once 'public/views/editFarmer.php';
     require_once 'public/layouts/footer.php';
@@ -69,7 +85,7 @@ switch ($request_uri[0]) {
 
     // removeFarmer page
   case '/removeFarmer':
-    $currentPageTitle = "Remove Farmer";
+    $currentPageTitle = "Enlever le producteur";
     require_once 'public/layouts/header.php';
     require_once 'public/views/removeFarmer.php';
     require_once 'public/layouts/footer.php';
@@ -77,7 +93,7 @@ switch ($request_uri[0]) {
 
     // addProduct page
   case '/addProduct':
-    $currentPageTitle = "Add Product";
+    $currentPageTitle = "Ajouter un produit";
     require_once 'public/layouts/header.php';
     require_once 'public/views/addProduct.php';
     require_once 'public/layouts/footer.php';
@@ -94,7 +110,7 @@ switch ($request_uri[0]) {
 
     // removeProduct page
   case '/removeProduct':
-    $currentPageTitle = "Remove Product";
+    $currentPageTitle = "Enlever le produit";
     require_once 'public/layouts/header.php';
     require_once 'public/views/removeProduct.php';
     require_once 'public/layouts/footer.php';
@@ -106,28 +122,19 @@ switch ($request_uri[0]) {
     // addFarmer Action
   case '/createFarmer':
     require 'controllers/addFarmerAction.php';
-    header('Location: /#section');
+    header('Location: /displayFarmers');
     break;
 
     // editFarmer Action
   case '/updateFarmer':
-    // $name = Functions::test_input($_POST['name']);
-    // $price = Functions::test_input($_POST['price']);
-    // $image = Functions::test_input($_POST['image']);
-    // $type_id = intval($_POST['type_id']);
-    // $farmer_id = intval($_POST['farmer_id']);
-
-    // require 'controllers/editCharacterAction.php';
-    // Farmer::updateFarmer($request_uri[1], $name, $price, $image, $type_id, $farmer_id);
-    // Farmer::updateCharacter($request_uri[1]);
-    header('Location: /');
+    require 'controllers/editFarmerAction.php';
+    header('Location: /displayFarmers');
     break;
 
     // removeFarmer Action
   case '/deleteFarmer':
-    // require 'controllers/removeProductAction.php';
-    // Farmer::deleteFarmer($request_uri[1]);
-    header('Location: /');
+    require 'controllers/removeFarmerAction.php';
+    header('Location: /displayFarmers');
     break;
 
     // addProduct Action
