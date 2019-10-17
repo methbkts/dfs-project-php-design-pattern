@@ -18,7 +18,7 @@ $farmer = Farmer::getAllFarmers();
                 <div class="col-lg-6">
                     <img class="img-fluid" src="<?= $value->image ?>" alt="">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 shadow-4dp">
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
@@ -28,7 +28,7 @@ $farmer = Farmer::getAllFarmers();
                                 <br>
                                 <p class="text-white">
                                     Pour voir les produits que propose <?= $value->name ?> :
-                                    <a href="/displayProductsByFarmer?<?= $value->id ?>"><button type="button" class="btn btn-farmer" value="<?= $value->id ?>" style="float: right;"><i class="fas fa-shopping-basket fa-2x"></i></button></a>
+                                    <a href="/displayProductsByFarmer?<?= $value->id ?>"><button type="button" class="btn btn-farmer shadow-2dp" value="<?= $value->id ?>" style="float: right;"><i class="fas fa-shopping-basket fa-2x"></i></button></a>
                                 </p>
                             </div>
                         </div>
