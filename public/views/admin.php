@@ -62,7 +62,7 @@ $nbFarmers = Farmer::countFarmers();
                         <td><?= $value->location ?></td>
                         <td><?= $value->description ?></td>
                         <td><a href="/editFarmer?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-info shadow-2dp"><i class="far fa-edit"></i></button></a></td>
-                        <td><a href="/deletefarmer?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-danger shadow-2dp"><i class="far fa-trash-alt"></i></button></a></td>
+                        <td><a href="/deleteFarmer?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-danger shadow-2dp"><i class="far fa-trash-alt"></i></button></a></td>
                     </tr>
                 <?php endforeach ?>
 
