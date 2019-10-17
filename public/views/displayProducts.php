@@ -9,7 +9,7 @@ $farmers = Farmer::getAllFarmers();
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
-                    <h4>Liste des porduits propose actuellement</h4>
+                    <h4>Liste des produits proposés actuellement</h4>
                     <p class="text-black-50 mb-0">Tous les produits sont disponible.</p>
                 </div>
             </div>
