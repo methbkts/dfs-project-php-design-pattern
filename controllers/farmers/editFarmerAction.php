@@ -50,4 +50,5 @@ if (!empty($farmer_id)) {
 
 Product::updateProduct($request_uri[1], $name, $price, $image, $quantity, $type_id, $farmer_id);
 
-Farmer::updateFarmer($request_uri[1]);
+// TODO:
+// Farmer::updateFarmer($request_uri[1]);
