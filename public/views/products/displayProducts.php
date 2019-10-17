@@ -16,10 +16,7 @@ $farmers = Farmer::getAllFarmers();
         </div>
 
         <!-- Project One Row -->
-        <?php
-
-        foreach ($products as $key => $value) {
-            ?>
+        <?php foreach ($products as $key => $value) : ?>
             <div class="row justify-content-center no-gutters mb-5 displayProducts">
                 <div class="col-lg-6">
                     <img class="img-fluid" src="<?= $value->image ?>" alt="">
@@ -45,20 +42,6 @@ $farmers = Farmer::getAllFarmers();
                     </div>
                 </div>
             </div>
-        <?php
-        }
-
-        ?>
+        <?php endforeach ?>
     </div>
 </section>
-<!-- <?php foreach ($farmers as $key => $value) {
-            $farmer_id = $value->id; ?>
-                                                <a href="/updateProduct? 
-                                                        <? $farmer_id ?> <?php } ?> ">
-                                                    <button type="button" <?php
-                                                                            foreach ($farmers as $key => $value) {
-                                                                                $farmer_id = $value->id;
-                                                                                ?> value="<?= $farmer_id ?>" <?php } ?>
-                                                        class="btn btn-info"><i class="fas fa-binoculars"></i>
-                                                    </button>
-                                                </a> -->

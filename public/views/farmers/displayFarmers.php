@@ -13,11 +13,7 @@ $farmer = Farmer::getAllFarmers();
             </div>
         </div>
 
-        <?php
-
-        foreach ($farmer as $key => $value) {
-
-            ?>
+        <?php foreach ($farmer as $key => $value) :?>
             <div class="row justify-content-center no-gutters mb-5">
                 <div class="col-lg-6">
                     <img class="img-fluid" src="<?= $value->image ?>" alt="">
@@ -39,10 +35,7 @@ $farmer = Farmer::getAllFarmers();
                     </div>
                 </div>
             </div>
-        <?php
-        }
-
-        ?>
+        <?php endforeach?>
 
         <!-- Project Two Row -->
         <!-- <div class="row justify-content-center no-gutters">

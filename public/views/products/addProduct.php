@@ -45,13 +45,9 @@ $farmers = Farmer::getAllFarmers();
                         <label for="type" class="col-sm-2 col-form-label">Type de produit</label>
                         <div class="col-sm-10">
                             <select name="type" id="type">
-                                <?php
-                                foreach ($types as $key => $value) {
-                                    ?>
+                                <?php foreach ($types as $key => $value) : ?>
                                     <option value="<?= $value->id ?>"><?= $value->name ?></option>
-                                <?php
-                                }
-                                ?>
+                                <?php endforeach ?>
                             </select>
                         </div>
                     </div>
@@ -60,12 +56,10 @@ $farmers = Farmer::getAllFarmers();
                         <div class="col-sm-10">
                             <select name="farmer" id="farmer">
                                 <?php
-                                foreach ($farmers as $key => $value) {
+                                foreach ($farmers as $key => $value) :
                                     ?>
                                     <option value="<?= $value->id ?>"><?= $value->name ?></option>
-                                <?php
-                                }
-                                ?>
+                                <?php endforeach ?>
                             </select>
                         </div>
                     </div>

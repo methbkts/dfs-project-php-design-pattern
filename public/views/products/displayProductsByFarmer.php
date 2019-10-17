@@ -18,10 +18,7 @@ $farmer = Farmer::getOneFarmer($farmer_id);
             </div>
         </div>
         <!-- Project One Row -->
-        <?php
-
-        foreach ($products as $key => $value) {
-            ?>
+        <?php foreach ($products as $key => $value) : ?>
             <div class="row justify-content-center no-gutters mb-5 mb-lg-0 displayProducts">
                 <div class="col-lg-6">
                     <img class="img-fluid" src="<?= $value->image ?>" alt="">
@@ -44,9 +41,6 @@ $farmer = Farmer::getOneFarmer($farmer_id);
                     </div>
                 </div>
             </div>
-        <?php
-        }
-
-        ?>
+        <?php endforeach ?>
     </div>
 </section>

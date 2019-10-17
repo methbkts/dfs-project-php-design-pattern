@@ -29,11 +29,6 @@ $productUpdate = Product::getOneProduct($product_id);
                     </div>
                 </div>
             </div>
-            <!-- <h4>Modifier un produit</h4> -->
-            <!-- <p class="text-black-50 mb-0">Vous pouvez modifier un produit avec ce formulaire</p> -->
-
-            <!-- <div class="row align-items-center no-gutters mb-4 mb-lg-5 displayProducts"> -->
-            <!-- <div class="col-xl-1 col-lg-3"></div> -->
             <div class="col-xl-8 col-lg-6">
                 <form action="/updateProduct?<?= $product_id ?>" method="post">
                     <div class="form-group row">
@@ -65,13 +60,9 @@ $productUpdate = Product::getOneProduct($product_id);
                         <label for="type_id" class="col-sm-2 col-form-label">Type</label>
                         <div class="col-sm-10">
                             <select name="type_id" id="type_id">
-                                <?php
-                                foreach ($type as $key => $value) {
-                                    ?>
+                                <?php foreach ($type as $key => $value) : ?>
                                     <option value="<?= $value->id ?>"><?= $value->name ?></option>
-                                <?php
-                                }
-                                ?>
+                                <?php endforeach ?>
                             </select>
                         </div>
                     </div>
@@ -79,13 +70,9 @@ $productUpdate = Product::getOneProduct($product_id);
                         <label for="farmer_id" class="col-sm-2 col-form-label">Le producteur</label>
                         <div class="col-sm-10">
                             <select name="farmer_id" id="farmer_id">
-                                <?php
-                                foreach ($farmer as $key => $value) {
-                                    ?>
+                                <?php foreach ($farmer as $key => $value) : ?>
                                     <option value="<?= $value->id ?>"><?= $value->name ?></option>
-                                <?php
-                                }
-                                ?>
+                                <?php endforeach ?>
                             </select>
                         </div>
                     </div>
@@ -96,9 +83,7 @@ $productUpdate = Product::getOneProduct($product_id);
                         </div>
                     </div>
                 </form>
-
             </div>
-
         </div>
     </div>
 </section>
