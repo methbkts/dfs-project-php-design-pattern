@@ -27,6 +27,13 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
+  case '/profile':
+    $currentPageTitle = "Votre profil";
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/profile.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
   case '/admin':
     $currentPageTitle = "Page d'administration";
     require_once 'public/layouts/header.php';

@@ -37,7 +37,7 @@
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <!-- TODO: ajouter condition si utilisateur lambda pour aller sur sa page de profil -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/admin">Profil</a>
+                        <a class="nav-link js-scroll-trigger" href="/profile">Profil</a>
                     </li>
                     <!-- <li class="nav-item">
                                         <a class="nav-link js-scroll-trigger" href="/addFarmer">Ajouter</a>
