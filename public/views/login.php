@@ -12,7 +12,7 @@
                     <input type="checkbox" value="remember-me"> Se souvenir de moi
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+            <button class="btn btn-lg btn-primary btn-block shadow-4dp" type="submit">Connexion</button>
         </form>
     </div>
 </section>

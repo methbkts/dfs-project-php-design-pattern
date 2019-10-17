@@ -17,7 +17,7 @@ $productUpdate = Product::getOneProduct($product_id);
                 <div class="col-xl-6 col-lg-3">
                     <img class="img-fluid" src="<?= $productUpdate->image ?>" alt="">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 shadow-4dp">
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">

@@ -22,18 +22,18 @@ $farmers = Farmer::getAllFarmers();
                     <img class="img-fluid" src="<?= $value->image ?>" alt="">
 
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 shadow-4dp">
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white cont-btn-displayProducts"><?= $value->name ?> de <?= $value->farmer ?></span>
-                                    <a href="/editProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-warning btn-sm"><i class="far fa-edit fa-sm"></i></button></a>
-                                    <a href="/deleteProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn-sm btn btn-danger "><i class="far fa-trash-alt fa-xs"></i></button></a>
+                                    <a href="/editProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-warning btn-sm shadow-2dp"><i class="far fa-edit fa-sm"></i></button></a>
+                                    <a href="/deleteProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn-sm btn btn-danger shadow-2dp"><i class="far fa-trash-alt fa-xs"></i></button></a>
                                 </h4>
                                 <p class="mb-0 text-muted"> <span class="text-white-50">Les <?= $value->name ?> de <?= $value->farmer ?> sont propose a : <?= $value->price ?> €</span>, il en reste : <span class="text-white-50"><?= $value->quantity ?></p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
                                 <p class="text-white">Voir les produits proposés par <?= $value->farmer ?>
-                                    <a href="/displayProductsByFarmer?<?= $value->farmer_id ?>"><button type="button" class="btn btn-farmer" value="<?= $value->farmer_id ?>"><i class="fas fa-shopping-basket"></i></button></a>
+                                    <a href="/displayProductsByFarmer?<?= $value->farmer_id ?>"><button type="button" class="btn btn-farmer shadow-2dp" value="<?= $value->farmer_id ?>"><i class="fas fa-shopping-basket"></i></button></a>
                                     <!-- <button type="button" class="btn btn-info"><i class="fas fa-binoculars"></i></button> -->
 
                                 </p>
