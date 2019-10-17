@@ -6,12 +6,19 @@
     color: white;
 }
 
+.cont-btn-displayProducts button{
+    /* height: 10%;
+    width: 10%; */
+}
+
 i>.fa-seedling{
     box-sizing: content-box !important;
 }
 
 .displayProducts .btn{
-    padding: 10px !important;
+    /* padding: 10px !important; */
+    padding: .25rem .5rem;
+
 }
 .displayProducts p{
     margin: 10px !important;
