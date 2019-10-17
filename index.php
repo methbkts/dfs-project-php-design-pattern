@@ -41,6 +41,13 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
+  case '/login':
+    $currentPageTitle = "Se connecter";
+    require_once 'public/layouts/header.php';
+    require_once 'public/views/login.php';
+    require_once 'public/layouts/footer.php';
+    break;
+
     // Farmers page
   case '/displayFarmers':
     $currentPageTitle = "Liste des producteurs";
@@ -83,13 +90,13 @@ switch ($request_uri[0]) {
     require_once 'public/layouts/footer.php';
     break;
 
-  //   // removeFarmer page
-  // case '/removeFarmer':
-  //   $currentPageTitle = "Enlever le producteur";
-  //   require_once 'public/layouts/header.php';
-  //   require_once 'public/views/farmers/removeFarmer.php';
-  //   require_once 'public/layouts/footer.php';
-  //   break;
+    //   // removeFarmer page
+    // case '/removeFarmer':
+    //   $currentPageTitle = "Enlever le producteur";
+    //   require_once 'public/layouts/header.php';
+    //   require_once 'public/views/farmers/removeFarmer.php';
+    //   require_once 'public/layouts/footer.php';
+    //   break;
 
     // addProduct page
   case '/addProduct':

@@ -39,6 +39,10 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/profile">Profil</a>
                     </li>
+                    <li class="nav-link collapse navbar-collapse">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/login">Connexion</a>
+                    </li>
                     <!-- <li class="nav-item">
                                         <a class="nav-link js-scroll-trigger" href="/addFarmer">Ajouter</a>
                                     </li>
