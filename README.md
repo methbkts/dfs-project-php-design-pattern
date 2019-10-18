@@ -1,5 +1,7 @@
 # dfs-project-php-designPattern
 
+![Homepage -fullwidth](./public/img/homepage.png "Homepage")
+
 # Sommaire
 
   * [Sujet](#sujet)
@@ -66,6 +68,8 @@ On utilise le MVC dans chacun de nos projets, il aide pour l'organisation et la 
 > En génie logiciel, le singleton est un patron de conception (design pattern) dont l'objectif est de restreindre l'instanciation d'une classe à un seul objet (ou bien à quelques objets seulement). Il est utilisé lorsqu'on a besoin exactement d'un objet pour coordonner des opérations dans un système. Le modèle est parfois utilisé pour son efficacité, lorsque le système est plus rapide ou occupe moins de mémoire avec peu d'objets qu'avec beaucoup d'objets similaires.
 
 On utilise le Singleton pour la class Count, celle-ci nous permet de récupérer le nombre d'entrées pour chaque table de la base de données.
+
+![Admin Panel -fullwidth](./public/img/admin.png "Admin Panel")
 
 ## Outils utilisés
 
