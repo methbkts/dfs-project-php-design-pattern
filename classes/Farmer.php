@@ -261,17 +261,4 @@ class Farmer
         return $result[0];
     }
 
-    /**
-     * Method that count farmers from the Database then returns them
-     *
-     * @param void
-     * @return int
-     */
-    public static function countFarmers()
-    {
-        $db = new Database;
-        $sql = "SELECT COUNT(id) FROM farmers;";
-        $result = $db->req($sql);
-        return $result[0];
-    }
 }
