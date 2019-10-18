@@ -37,30 +37,16 @@
                     <li class="nav-link collapse navbar-collapse">|</li>
                     <!-- TODO: ajouter condition si utilisateur lambda pour aller sur sa page de profil -->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/profile">Profil</a>
+                        <a class="nav-link js-scroll-trigger" href="/profile#section">Profil</a>
                     </li>
-                    <li class="nav-link collapse navbar-collapse">|</li
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/admin">Administration</a>
-                    </li>
-                    <li class="nav-link collapse navbar-collapse">|</li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/login">Connexion</a>
+                    <li class="nav-link collapse navbar-collapse">|</li <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/admin#section">Administration</a>
                     </li>
                     <li class="nav-link collapse navbar-collapse">|</li>
-              
-                    <!-- <li class="nav-item">
-                                        <a class="nav-link js-scroll-trigger" href="/addFarmer">Ajouter</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link js-scroll-trigger" href="/editFarmer">Editer</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link js-scroll-trigger" href="/removeFarmer">Supprimer</a>
-                                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/addProduct">Ajouter</a>
-                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/login#section">Connexion</a>
+                    </li>
+                    <li class="nav-link collapse navbar-collapse">|</li>
                 </ul>
             </div>
         </div>
