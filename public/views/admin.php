@@ -1,7 +1,7 @@
 <?php
 $farmer = Farmer::getAllFarmers();
-$nbProducts = Product::countProducts();
-$nbFarmers = Farmer::countFarmers();
+$nbProducts = Count::countProducts();
+$nbFarmers = Count::countFarmers();
 $products = Product::getAllProducts();
 // Functions::dd($nbProducts);
 ?>
