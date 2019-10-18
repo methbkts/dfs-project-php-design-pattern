@@ -1,9 +1,9 @@
 <?php
 $farmer = Farmer::getAllFarmers();
-$nbProducts = Count::countProducts();
-$nbFarmers = Count::countFarmers();
+$ProductsNb = Count::countProducts();
+$FarmersNb = Count::countFarmers();
 $products = Product::getAllProducts();
-// Functions::dd($nbProducts);
+// Functions::dd($nbProducts->COUNT(id));
 ?>
 <section id="section" class="projects-section bg-light">
     <div class="container">
@@ -15,8 +15,7 @@ $products = Product::getAllProducts();
                 <div class="bg-black text-center h-100 project collapse-admin count-product shadow-4dp">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Il y a <?php foreach ($nbProducts as $key => $value) : echo $value;
-                                                            endforeach ?> produits en vente actuellement</h4>
+                            <h4 class="text-white">Il y a <?= $ProductsNb ?> produits en vente actuellement</h4>
                             <p class="mb-0 text-white"><i class="fas fa-seedling fa-4x"></i></p>
                             <hr class="d-none d-lg-block mb-0 mr-0">
                         </div>
@@ -28,8 +27,7 @@ $products = Product::getAllProducts();
                 <div class="bg-black text-center h-100 project collapse-admin count-farmer shadow-4dp">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Il y a <?php foreach ($nbFarmers as $key => $value) : echo $value;
-                                                            endforeach ?> producteurs actuellement enregistrés</h4>
+                            <h4 class="text-white">Il y a <?= $FarmersNb ?> producteurs actuellement enregistrés</h4>
                             <p class="mb-0 text-white"><i class="fas fa-users fa-4x"></i></p>
                             <hr class="d-none d-lg-block mb-0 mr-0">
                         </div>
@@ -44,7 +42,7 @@ $products = Product::getAllProducts();
             <div class="col-xl-4 col-lg-5">
                 <div class="row">
                     <div class="col-lg-9 featured-text text-center text-lg-left">
-                        <h4>Ajouter un produits :</h4>
+                        <h4>Ajouter un produit :</h4>
                         <p class="text-black-50 mb-0">Les produits proposés par nos producteurs.</p>
                     </div>
                     <div class="col-lg-1"></div>

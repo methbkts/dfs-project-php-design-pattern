@@ -49,9 +49,10 @@ class Count
   public static function countProducts()
   {
     $db = new Database;
-    $sql = "SELECT COUNT(id) FROM products;";
+    // $sql = "SELECT COUNT(id) FROM products;";
+    $sql = "SELECT COUNT(*) as ProductsNb FROM products;";
     $result = $db->req($sql);
-    return $result[0];
+    return $result[0]->ProductsNb;
   }
 
   /**
@@ -63,9 +64,10 @@ class Count
   public static function countFarmers()
   {
     $db = new Database;
-    $sql = "SELECT COUNT(id) FROM farmers;";
+    // $sql = "SELECT COUNT(id) FROM farmers;";
+    $sql = "SELECT COUNT(*) as FarmersNb FROM farmers;";
     $result = $db->req($sql);
-    return $result[0];
+    return $result[0]->FarmersNb;
   }
 
 
