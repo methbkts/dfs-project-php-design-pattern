@@ -84,6 +84,8 @@ On utilise le Singleton pour la class Count, celle-ci nous permet de récupérer
 - Update : Le prix doit être mit avec un point en tant que séparation (problème toujours présent)
 - Point faible : Trop forts ...
 
+![PointFaibleTropForts -fullwidth](./public/img/pftf.jpg "Point faible : Trop forts")
+
 ## TODO
 
 - Ajout d'un système d'authenfication,
