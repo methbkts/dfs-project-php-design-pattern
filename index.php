@@ -5,7 +5,9 @@
 spl_autoload_register(function ($class) {
   require_once 'classes/' . $class . '.php';
 });
+
 $count = Count::getInstance();
+
 // User management -->
 // if (isset($_POST['username'])) {
 //   $_SESSION['username'] = $_POST['username'];
@@ -35,7 +37,7 @@ switch ($request_uri[0]) {
     break;
 
   case '/admin':
-    $currentPageTitle = "Page d'administration";
+    $currentPageTitle = "Panel d'administration";
     require_once 'public/layouts/header.php';
     require_once 'public/views/admin.php';
     require_once 'public/layouts/footer.php';

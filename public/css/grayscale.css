@@ -105,6 +105,7 @@
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .masthead h2 {
@@ -125,8 +126,8 @@
     padding: 0;
   }
   .masthead h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
+    font-size: 5rem;
+    line-height: 5rem;
     letter-spacing: 0.8rem;
   }
   .masthead h2 {
