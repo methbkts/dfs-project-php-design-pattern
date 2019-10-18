@@ -47,6 +47,17 @@ Ce lieu c'est **Farming express**.
 
 ## Design pattern
 
+>Modèle-vue-contrôleur ou MVC est un motif d'architecture logicielle destiné aux interfaces graphiques lancé en 1978 et très populaire pour les applications web. Le motif est composé de trois types de modules ayant trois responsabilités différentes : les modèles, les vues et les contrôleurs.
+>- Un modèle (Model) contient les données à afficher.
+>- Une vue (View) contient la présentation de l'interface graphique.
+>- Un contrôleur (Controller) contient la logique concernant les actions effectuées par l'utilisateur.
+
+On utilise le MVC dans chacun de nos projets, il aide pour l'organisation et la logique. Le modèle MVC sert de régles lors d'un projet et évite notamment les conflits sur github.
+
+> En génie logiciel, le singleton est un patron de conception (design pattern) dont l'objectif est de restreindre l'instanciation d'une classe à un seul objet (ou bien à quelques objets seulement). Il est utilisé lorsqu'on a besoin exactement d'un objet pour coordonner des opérations dans un système. Le modèle est parfois utilisé pour son efficacité, lorsque le système est plus rapide ou occupe moins de mémoire avec peu d'objets qu'avec beaucoup d'objets similaires.
+
+On utilise le singleton pour la class Count, celle-ci nous permet d'effectuer des opérations sur différente table.
+
 ## Outils utilisés
 
 - PHP,
@@ -60,3 +71,6 @@ Ce lieu c'est **Farming express**.
 - FontAwesome.
 
 ## Problématiques
+- Singleton : Il n'est pas évident de trouver qu'elle class créer avec ce design pattern;
+- Update : Le prix doit être mis avec un point en tant que séparation (problème toujours présent)
+- Point faible : Trop forts ...
