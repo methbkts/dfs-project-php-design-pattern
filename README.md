@@ -4,7 +4,7 @@
 
   * [Sujet](#sujet)
   * [Thème du site](#thème-du-site)
-  * [Design pattern](#design-pattern)
+  * [Design patterns](#design-patterns)
   * [Outils utilisés](#outils-utilisés)
   * [Problématiques](#problématiques)
   * [TODO](#todo)
@@ -54,42 +54,42 @@ Un espace permettant la rencontre entre producteurs et consommateurs, un espace 
 
 Ce lieu c'est **Farming express**.
 
-## Design pattern
+## Design patterns
 
 >Modèle-vue-contrôleur ou MVC est un motif d'architecture logicielle destiné aux interfaces graphiques lancé en 1978 et très populaire pour les applications web. Le motif est composé de trois types de modules ayant trois responsabilités différentes : les modèles, les vues et les contrôleurs.
 >- Un modèle (Model) contient les données à afficher.
 >- Une vue (View) contient la présentation de l'interface graphique.
 >- Un contrôleur (Controller) contient la logique concernant les actions effectuées par l'utilisateur.
 
-On utilise le MVC dans chacun de nos projets, il aide pour l'organisation et la logique. Le modèle MVC sert de régles lors d'un projet et évite notamment les conflits sur github.
+On utilise le MVC dans chacun de nos projets, il aide pour l'organisation et la logique. Le modèle MVC sert de règles lors d'un projet et évite notamment les conflits sur GitHub.
 
 > En génie logiciel, le singleton est un patron de conception (design pattern) dont l'objectif est de restreindre l'instanciation d'une classe à un seul objet (ou bien à quelques objets seulement). Il est utilisé lorsqu'on a besoin exactement d'un objet pour coordonner des opérations dans un système. Le modèle est parfois utilisé pour son efficacité, lorsque le système est plus rapide ou occupe moins de mémoire avec peu d'objets qu'avec beaucoup d'objets similaires.
 
-On utilise le singleton pour la class Count, celle-ci nous permet d'effectuer des opérations sur différente table.
+On utilise le Singleton pour la class Count, celle-ci nous permet de récupérer le nombre d'entrées pour chaque table de la base de données.
 
 ## Outils utilisés
 
 - PHP,
 - Bootstrap,
 - Adminer,
-- MySql,
-- Design pattern,
+- MySQL,
+- Design patterns,
 - Trello,
 - GitHub,
 - Unsplash,
 - FontAwesome.
 
 ## Problématiques
-- Singleton : Il n'est pas évident de trouver qu'elle class créer avec ce design pattern;
-- Update : Le prix doit être mis avec un point en tant que séparation (problème toujours présent)
+- Singleton : Il n'est pas évident de trouver une utilité pour ce design pattern
+- Update : Le prix doit être mit avec un point en tant que séparation (problème toujours présent)
 - Point faible : Trop forts ...
 
 ## TODO
 
-- Ajout d'un system d'autenfication,
+- Ajout d'un système d'authenfication,
 - Ajout d'un menu déroulant,
-- Ajout de try catch sur les requests,
-- Ajout du type herbe aromatique dans la db,
+- Ajout de try catch sur les requêtes,
+- Ajout du type herbes aromatiques dans la db,
 - Ajout d'une table utilisateur dans la db,
-- Ajout d'une table de role dans la db,
-- Faire la partie back du profil pour chaque utilisateur.
+- Ajout d'une table role dans la db,
+- Faire la partie backend du profil pour chaque utilisateur.
