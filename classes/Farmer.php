@@ -205,6 +205,7 @@ class Farmer
     {
         $db = new Database;
         $sql = "UPDATE `farmers` SET `name` = '$name', `description` = '$description',`location` = '$location', `image` = '$image' WHERE `id` = $id";
+        // Functions::dd($sql);
         $db->req($sql);
     }
 
@@ -255,6 +256,7 @@ class Farmer
         FROM `farmers`
         WHERE `id` = $id;";
         $result = $db->req($sql);
+        // Functions::dd($sql);
         // Functions::dd($result[0]);
         return $result[0];
     }

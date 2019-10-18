@@ -31,7 +31,7 @@ $farmerUpdate = Farmer::getOneFarmer($farmer_id);
             </div>
             <div class="col-xl-2 col-lg-3"></div>
             <div class="col-xl-6 col-lg-6">
-                <form action="/updateFarmer?<?= $value->id ?>" method="post">
+                <form action="/updateFarmer?<?= $farmer_id ?>" method="post">
                     <div class="form-group row">
                         <label for="name" class="col-sm-2 col-form-label">Nom du producteur</label>
                         <div class="col-sm-10">
@@ -41,7 +41,7 @@ $farmerUpdate = Farmer::getOneFarmer($farmer_id);
                     <div class="form-group row">
                         <label for="description" class="col-sm-2 col-form-label">Description du producteur</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="description" name="description" id="description">
+                            <input type="text" class="form-control" placeholder="Description du producteur" name="description" id="description">
                         </div>
                     </div>
                     <div class="form-group row">

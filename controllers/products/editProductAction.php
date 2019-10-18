@@ -2,32 +2,29 @@
 
 $currentProduct = Product::getOneProduct($product_id);
 
-
-
-if (empty($name)) {
-    $name = $currentProduct->name;
-} else {
+if (!empty($_POST['name'])) {
     $name = Functions::test_input($_POST['name']);
+} else {
+    $name = $currentProduct->name;
 }
 
-if (empty($image)) {
-    $image = $currentProduct->image;
-} else {
+if (!empty($_POST['image'])) {
     $image = Functions::test_input($_POST['image']);
+} else {
+    $image = $currentProduct->image;
 }
 
-if (empty($price)) {
+if (!empty($_POST['price'])) {
+    $price = intval($_POST['price']);
+} else {
     $price = $currentProduct->price;
-} else {
-    intval($_POST['price']);
 }
 
-if (empty($quantity)) {
+if (!empty($_POST['quantity'])) {
+    $quantity = intval($_POST['quantity']);
+} else {
     $quantity = $currentProduct->quantity;
-} else {
-    intval($_POST['quantity']);
 }
-
 
 // if(empty($type_id)){
 //     $type_id = $currentProduct->type_id;

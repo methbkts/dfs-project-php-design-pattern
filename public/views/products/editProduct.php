@@ -1,8 +1,8 @@
 <?php
+$farmers = Farmer::getAllFarmers();
 $type = Product::getAllTypes();
-$farmer = Farmer::getAllFarmers();
 $productUpdate = Product::getOneProduct($product_id);
-// Functions::dd($farmer);
+// Functions::dd($farmers);
 ?>
 <section id="section" class="projects-section bg-light">
     <div class="container">
@@ -70,7 +70,7 @@ $productUpdate = Product::getOneProduct($product_id);
                         <label for="farmer_id" class="col-sm-2 col-form-label">Le producteur</label>
                         <div class="col-sm-10">
                             <select name="farmer_id" id="farmer_id">
-                                <?php foreach ($farmer as $key => $value) : ?>
+                                <?php foreach ($farmers as $key => $value) : ?>
                                     <option value="<?= $value->id ?>"><?= $value->name ?></option>
                                 <?php endforeach ?>
                             </select>

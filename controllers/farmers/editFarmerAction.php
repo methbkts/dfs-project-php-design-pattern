@@ -2,53 +2,29 @@
 
 $currentFarmer = Farmer::getOneFarmer($farmer_id);
 
-if (empty($name)) {
-    $name = $currentFarmer->name;
-} else {
+
+if (!empty($_POST['name'])) {
     $name = Functions::test_input($_POST['name']);
+} else {
+    $name = $currentFarmer->name;
 }
 
-if (empty($description)) {
-    $description = $currentFarmer->description;
-} else {
+if (!empty($_POST['description'])) {
     $description = Functions::test_input($_POST['description']);
-}
-
-// $location = Functions::test_input($_POST['location']);
-// if (empty($_POST['image'])) {
-//     $image = '/public/img/default-profile.png';
-// } else {
-//     $image = Functions::test_input($_POST['image']);
-// }
-
-if (!empty($price)) {
-    $price = $currentProduct->price;
 } else {
-    intval($_POST['price']);
+    $description = $currentFarmer->description;
 }
 
-if (!empty($quantity)) {
-    $quantity = $currentProduct->quantity;
+if (!empty($_POST['location'])) {
+    $location = Functions::test_input($_POST['location']);
 } else {
-    intval($_POST['quantity']);
+    $location = $currentFarmer->location;
 }
 
-if (!empty($type_id)) {
-    $type_id = $currentProduct->type_id;
+if (!empty($_POST['image'])) {
+    $image = Functions::test_input($_POST['image']);
 } else {
-    intval($_POST['type_id']);
+    $image = $currentFarmer->image;
 }
 
-if (!empty($farmer_id)) {
-    $farmer_id = $currentProduct->farmer_id;
-} else {
-    intval($_POST['farmer_id']);
-}
-// $farmer_id = intval($_POST['farmer_id']);
-
-// Functions::dd($farmer_id);
-
-Product::updateProduct($request_uri[1], $name, $price, $image, $quantity, $type_id, $farmer_id);
-
-// TODO:
-// Farmer::updateFarmer($request_uri[1]);
+Farmer::updateFarmer($request_uri[1], $name, $description, $location, $image);
