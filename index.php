@@ -68,9 +68,11 @@ switch ($request_uri[0]) {
 
     // One Farmer's Products page
   case '/displayProductsByFarmer':
-    // remplacer 'fermier' par le nom du producteur
-    $currentPageTitle = "Liste des produits du fermier";
     $farmer_id = $request_uri[1];
+    $products = Product::getProductsByFarmer($farmer_id);
+    $farmer = Farmer::getOneFarmer($farmer_id);
+    $farmer_name = $farmer->name;
+    $currentPageTitle = "Liste des produits de $farmer->name";
     require_once 'public/layouts/header.php';
     require_once 'public/views/products/displayProductsByFarmer.php';
     require_once 'public/layouts/footer.php';
