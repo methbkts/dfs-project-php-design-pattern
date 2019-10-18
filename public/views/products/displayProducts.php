@@ -1,7 +1,6 @@
 <?php
 $products = Product::getAllProducts();
 $farmers = Farmer::getAllFarmers();
-// $farmerName = Farmer::getName();
 ?>
 <section id="section" class="projects-section bg-light">
     <div class="container">
