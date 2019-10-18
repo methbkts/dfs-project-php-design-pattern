@@ -5,7 +5,7 @@
 spl_autoload_register(function ($class) {
   require_once 'classes/' . $class . '.php';
 });
-
+$count = Count::getInstance();
 // User management -->
 // if (isset($_POST['username'])) {
 //   $_SESSION['username'] = $_POST['username'];
