@@ -1,13 +1,14 @@
 # dfs-project-php-designPattern
 
-# Table of Contents
-1. [Sujet](Sujet)
-2. [Thème du site](#thème-du-site)
-3. [Design Pattern](#design-pattern)
-4. [Outils utilisés](#outils-utilisés)
-5. [Problèmatiques](#problèmatique)
-6. [TODO](#todo)
+# Sommaire
 
+  * [Sujet](#sujet)
+  * [Thème du site](#thème-du-site)
+  * [Design pattern](#design-pattern)
+  * [Outils utilisés](#outils-utilisés)
+  * [Problématiques](#problématiques)
+  * [TODO](#todo)
+  
 ## Sujet
 
 Ce sujet est assez spécial puisqu'il sera en lien avec un autre module concernant les frameworks PHP. Vous porterez donc une attention particulière à celui-ci.
@@ -38,7 +39,7 @@ Une attention (comme à mon habitude) sera portée sur la structure de votre cod
 Attention : une partie "devOps" vous sera utile. Vous devrez également créer des scripts interactifs pour vos collègues, vous permettant de déployer rapidement votre environnement de travail en récupérant "automatiquement" le contenu de votre projet à jour (Git). Pour ce faire, vous pourrez choisir de travailler avec Vagrant, ou toutes autres technologies que vous
 jugerez intéressantes ou importantes d'utiliser (par exemple, apprendre à utiliser Docker pour les plus braves).
 
-## Thème du site :
+## Thème du site
 
 **Farming express** est un site qui vise à promouvoir l'agriculture locale et est destiné aussi bien aux producteurs qu'au grand public.
 Nous pensons que chaque producteur est unique, qu'il a une histoire à raconter avec ses produits mais qu'il n'a souvent pas le temps de se consacrer à la diffusion de celle-ci.
@@ -53,7 +54,7 @@ Un espace permettant la rencontre entre producteurs et consommateurs, un espace 
 
 Ce lieu c'est **Farming express**.
 
-## Design pattern :
+## Design pattern
 
 >Modèle-vue-contrôleur ou MVC est un motif d'architecture logicielle destiné aux interfaces graphiques lancé en 1978 et très populaire pour les applications web. Le motif est composé de trois types de modules ayant trois responsabilités différentes : les modèles, les vues et les contrôleurs.
 >- Un modèle (Model) contient les données à afficher.
@@ -66,7 +67,7 @@ On utilise le MVC dans chacun de nos projets, il aide pour l'organisation et la 
 
 On utilise le singleton pour la class Count, celle-ci nous permet d'effectuer des opérations sur différente table.
 
-## Outils utilisés :
+## Outils utilisés
 
 - PHP,
 - Bootstrap,
@@ -78,12 +79,12 @@ On utilise le singleton pour la class Count, celle-ci nous permet d'effectuer de
 - Unsplash,
 - FontAwesome.
 
-## Problématiques :
+## Problématiques
 - Singleton : Il n'est pas évident de trouver qu'elle class créer avec ce design pattern;
 - Update : Le prix doit être mis avec un point en tant que séparation (problème toujours présent)
 - Point faible : Trop forts ...
 
-## TODO :
+## TODO
 
 - Ajout d'un system d'autenfication,
 - Ajout d'un menu déroulant,
