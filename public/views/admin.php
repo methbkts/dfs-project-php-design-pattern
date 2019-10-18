@@ -68,58 +68,61 @@ $products = Product::getAllProducts();
             </div>
         </div>
         <h3>Liste des fermiers</h3>
-        <table class="table table-striped shadow-4dp">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Localisation</th>
-                    <th scope="col">description</th>
-                    <th scope="col">editer</th>
-                    <th scope="col">ajouter</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($farmer as $key => $value) : ?>
+        <div class="table-responsive" style="border-radius:10px;">
+            <table class="table table-striped shadow-4dp">
+                <thead class="thead-dark">
                     <tr>
-                        <td><?= $value->name ?></td>
-                        <td><?= $value->location ?></td>
-                        <td><?= $value->description ?></td>
-                        <td><a href="/editFarmer?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-info shadow-2dp"><i class="far fa-edit"></i></button></a></td>
-                        <td><a href="/deleteFarmer?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-danger shadow-2dp"><i class="far fa-trash-alt"></i></button></a></td>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Localisation</th>
+                        <th scope="col">description</th>
+                        <th scope="col">editer</th>
+                        <th scope="col">ajouter</th>
                     </tr>
-                <?php endforeach ?>
+                </thead>
+                <tbody>
+                    <?php foreach ($farmer as $key => $value) : ?>
+                        <tr>
+                            <td><?= $value->name ?></td>
+                            <td><?= $value->location ?></td>
+                            <td><?= $value->description ?></td>
+                            <td><a href="/editFarmer?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-info shadow-2dp"><i class="far fa-edit"></i></button></a></td>
+                            <td><a href="/deleteFarmer?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-danger shadow-2dp"><i class="far fa-trash-alt"></i></button></a></td>
+                        </tr>
+                    <?php endforeach ?>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
         <br>
         <h3>Liste des produits</h3>
-        <table class="table table-striped shadow-4dp">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Producteur</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">prix</th>
-                    <th scope="col">quantité</th>
-                    <th scope="col">editer</th>
-                    <th scope="col">ajouter</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($products as $key => $value) : ?>
+        <div class="table-responsive" style="border-radius:10px;">
+            <table class="table table-striped shadow-4dp">
+                <thead class="thead-dark">
                     <tr>
-                        <td><?= $value->name ?></td>
-                        <td><?= $value->farmer ?></td>
-                        <td><?= $value->type ?></td>
-                        <td><?= $value->price ?></td>
-                        <td><?= $value->quantity ?></td>
-                        <td><a href="/editProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-info shadow-2dp"><i class="far fa-edit"></i></button></a></td>
-                        <td><a href="/deleteProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-danger shadow-2dp"><i class="far fa-trash-alt"></i></button></a></td>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Producteur</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">prix</th>
+                        <th scope="col">quantité</th>
+                        <th scope="col">editer</th>
+                        <th scope="col">ajouter</th>
                     </tr>
-                <?php endforeach ?>
+                </thead>
+                <tbody>
+                    <?php foreach ($products as $key => $value) : ?>
+                        <tr>
+                            <td><?= $value->name ?></td>
+                            <td><?= $value->farmer ?></td>
+                            <td><?= $value->type ?></td>
+                            <td><?= $value->price ?></td>
+                            <td><?= $value->quantity ?></td>
+                            <td><a href="/editProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-info shadow-2dp"><i class="far fa-edit"></i></button></a></td>
+                            <td><a href="/deleteProduct?<?= $value->id ?>"><button type="button" value="<?= $value->id ?>" class="btn btn-danger shadow-2dp"><i class="far fa-trash-alt"></i></button></a></td>
+                        </tr>
+                    <?php endforeach ?>
 
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
     </div>
 </section>
