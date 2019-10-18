@@ -9,7 +9,7 @@ $farmers = Farmer::getAllFarmers();
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4>Liste des produits proposés actuellement</h4>
-                    <p class="text-black-50 mb-0">Tous les produits sont disponible.</p>
+                    <p class="text-black-50 mb-0">Tous les produits proposés par nos producteurs.</p>
                 </div>
             </div>
         </div>
@@ -26,7 +26,9 @@ $farmers = Farmer::getAllFarmers();
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <h4 class="text-white cont-btn-displayProducts"><?= $value->name ?> de <?= $value->farmer ?></h4>
-                                <p class="mb-0 text-muted"> <span class="text-white-50">Les <?= $value->name ?> de <?= $value->farmer ?> sont propose a : <?= $value->price ?> €</span>, il en reste : <span class="text-white-50"><?= $value->quantity ?></p>
+                                <p class="mb-0 text-white">Les <?= $value->name ?> de <?= $value->farmer ?> sont proposé(e)s à <?= $value->price ?>€.</p>
+                                <p class="mb-0 text-white">Il en reste actuellement <?= $value->quantity ?>.</p>
+
                                 <hr class="d-none d-lg-block mb-0 ml-0">
                                 <p class="text-white">Voir les produits proposés par <?= $value->farmer ?>
                                     <a href="/displayProductsByFarmer?<?= $value->farmer_id ?>"><button type="button" class="btn btn-farmer shadow-2dp" value="<?= $value->farmer_id ?>"><i class="fas fa-shopping-basket"></i></button></a>
