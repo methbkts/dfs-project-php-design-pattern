@@ -1,5 +1,4 @@
 <?php
-
 ?>
 
 <section id="section" class="projects-section bg-light">

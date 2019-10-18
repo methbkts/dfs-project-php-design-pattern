@@ -85,6 +85,7 @@ switch ($request_uri[0]) {
     // editFarmer page
   case '/editFarmer':
     $currentPageTitle = "Modifier le producteur";
+    $farmer_id = $request_uri[1];
     require_once 'public/layouts/header.php';
     require_once 'public/views/farmers/editFarmer.php';
     require_once 'public/layouts/footer.php';
