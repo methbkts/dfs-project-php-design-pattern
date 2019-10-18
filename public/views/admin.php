@@ -49,7 +49,7 @@ $products = Product::getAllProducts();
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-xl-2 col-lg-2">
-                        <a href="/createFarmer"><button type="button" value="" class="btn btn-success shadow-2dp"><i class="fas fa-plus fa-2x"></i></i></button></a>
+                        <a href="/addProduct"><button type="button" value="" class="btn btn-success shadow-2dp"><i class="fas fa-plus fa-2x"></i></i></button></a>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@ $products = Product::getAllProducts();
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-xl-2 col-lg-2">
-                        <a href="/createFarmer"><button type="button" value="" class="btn btn-success shadow-2dp"><i class="fas fa-user-plus fa-2x"></i></button></a>
+                        <a href="/addFarmer"><button type="button" value="" class="btn btn-success shadow-2dp"><i class="fas fa-user-plus fa-2x"></i></button></a>
                     </div>
                 </div>
             </div>
