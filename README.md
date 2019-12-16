@@ -1,4 +1,4 @@
-# dfs-project-php-designPattern
+# dfs-project-php-design-pattern
 
 ![Homepage -fullwidth](./public/img/homepage.png "Homepage")
 
